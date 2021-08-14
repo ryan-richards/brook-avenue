@@ -37,7 +37,7 @@ export default {
 }
 
 .spacer {
-  padding-top: 7rem;
+  padding-top: 3rem;
 }
 
 

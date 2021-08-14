@@ -1,20 +1,19 @@
 <template>
 
+
 <div class="container">
   <div class="columns">
 
   <div class="column">
 
-  <img class="img-block" src="">
 
-   <div class="image-stack">
-      <div class="image-stack__item image-stack__item--top">
-        <img class="rounded" src="https://brookavenue.files.wordpress.com/2020/02/21f9f67a-7a47-4d00-8f03-fe49568266aa.jpg?w=720" alt="A portrait of a girl under hanging flowers.">
-      </div>
-      <div class="image-stack__item image-stack__item--bottom">
-        <img class="rounded" src="https://brookavenue.files.wordpress.com/2019/07/27670c50-c7a0-46e6-bbec-c33b82b3d804.jpg?w=720" alt="">
-      </div>
-   </div>
+
+<figure class="image is-square">
+   <img class="image" src="https://brookavenue.files.wordpress.com/2020/02/21f9f67a-7a47-4d00-8f03-fe49568266aa.jpg?w=720" alt="A portrait of a girl under hanging flowers.">
+</figure>
+
+
+
   
   </div>
 
@@ -54,6 +53,7 @@
 
 
 
+
 </template>
 
 <script>
@@ -73,13 +73,10 @@
   text-align: left;
 }
 
-.container{
-  margin-top:min(1rem,3rem,5rem);
-}
 
 .button {
   color: whitesmoke;
-  background-color: rgb(135, 179, 138);
+     background-color:rgb(119, 139, 121);
 }
 
 .control.has-icons-left .input, .control.has-icons-left .select select {
@@ -88,10 +85,6 @@
 
 .title {
 max-width: 500px;
-}
-
-.rounded {
-  border-radius:0%;
 }
 
 

@@ -47,7 +47,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
 a.navbar-item:hover{
     color: tomato;
@@ -57,6 +57,10 @@ a.navbar-item:hover{
 .navbar-menu{
     box-shadow: none;
     background-color: transparent;
+}
+
+.container {
+    margin-top: -1rem;
 }
 
 </style>
