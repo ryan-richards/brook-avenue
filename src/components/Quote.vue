@@ -4,9 +4,12 @@
     <div class="hero">
     <div class="hero-body has-text-left">
     <div class="title">{{ quoteMessage }}</div>
-    <div class="subtitle">{{ subtitle }}</div>
+    <div class="subtitle pt-1">{{ subtitle }}</div>
             <div class="buttons ">
-          <a href="inquire.html" class="button">{{ buttonText }}</a>
+              <router-link to="/pricing">
+                 <a class="button">{{ buttonText }}</a>
+              </router-link>
+       
         </div>
     </div>
     </div>
@@ -38,6 +41,7 @@ export default {
 .hero-body {
     padding-left:0;
     padding-bottom: 1rem;
+
 }
 
 .wrapper{

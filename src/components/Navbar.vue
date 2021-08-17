@@ -3,12 +3,15 @@
 <div class="container">
 <nav class="navbar">
    <div class="navbar-brand">
-    <a href="index.html" class="navbar-item mr-6 has-text-left">
-       <div>
-        <h1 style="font-weight:800;">Brook Avenue</h1>
-        <h2>Artisan Gelato</h2>
-        </div>
-        </a>
+       <router-link to="/">
+        <a class="navbar-item mr-6 has-text-left">
+            <div>
+            <h1 style="font-weight:800;">Brook Avenue</h1>
+            <h2>Artisan Gelato</h2>
+            </div>
+            </a>
+       </router-link>
+    
             
         <a role="button" @click="toggle" v-bind:class="{'is-active': isActive, 'toggle-off': !isActive}" class="navbar-burger" aria-label="menu" aria-expanded="false">
          <span aria-hidden="true"></span>
@@ -18,10 +21,10 @@
         </div>
             
      <div class="navbar-menu" v-bind:class="{'is-active': isActive, 'toggle-off': !isActive}" >
-        <div class="navbar-end"> 
-          <a href="about.html" class="navbar-item list">About</a>
-          <a href="flavours.html" class="navbar-item list">Flavours</a>
-        <a href="FAQ.html" class="navbar-item list">FAQ</a>
+        <div class="navbar-end">
+        <router-link to="/about"><a class="navbar-item list pt-4">About</a></router-link>
+        <router-link to="/about"><a class="navbar-item list pt-4">Flavours</a></router-link>
+        <router-link to="/about"><a class="navbar-item list pt-4">Contact</a></router-link>
             </div>
          </div>
 </nav>

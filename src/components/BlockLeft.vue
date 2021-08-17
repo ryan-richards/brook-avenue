@@ -1,5 +1,5 @@
 <template>
-  <div class="container spacer">
+  <div class="container">
 
     <div class="columns">
       <div class="column content has-text-left">
@@ -18,8 +18,9 @@
         </div>
       </div>
     </div>
-
+     <hr />
   </div>
+ 
 </template>
 
 
