@@ -6,7 +6,7 @@
         <div class="column content has-text-left">
             <div class="title">Pricing.</div>
             <div class="subtitle">Enter your details to generate quote.</div>
-            <form @submit.prevent="handleSubmit" name="Quote" data-netlify="true">
+            <form @submit.prevent="handleSubmit" name="Quote" netlify>
                 <div class="field">
                      <label class="label">Email</label>
                      <div class="control">
