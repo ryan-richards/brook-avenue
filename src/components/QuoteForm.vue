@@ -6,29 +6,29 @@
         <div class="column content has-text-left">
             <div class="title">Pricing.</div>
             <div class="subtitle">Enter your details to generate quote.</div>
-            <form @submit.prevent="handleSubmit" name="Quote" netlify>
+            <form @submit.prevent="handleSubmit" name="Quote" data-netlify="true">
                 <div class="field">
                      <label class="label">Email</label>
                      <div class="control">
-                         <input class="input" name="email" type="email" placeholder="hello@email.com" v-model="email">
+                         <input class="input" name="email" type="email" placeholder="hello@email.com" value="email" v-model="email">
                      </div>      
                 </div>
                 <div class="field">
                      <label class="label">Venue</label>
                      <div class="control">
-                         <input class="input" name="venue" type="text" placeholder="Venue" v-model="venue">
+                         <input class="input" name="venue" type="text" placeholder="Venue" value="Venue" v-model="venue">
                      </div>      
                 </div>
                 <div class="field">
                      <label class="label">Event Date</label>
                      <div class="control">
-                         <input class="input" name="date" type="date" placeholder="Date" v-model="date">
+                         <input class="input" name="date" type="date" placeholder="Date" value="Date" v-model="date">
                      </div>      
                 </div>
                   <div class="field">
                      <label class="label">Number of Guests</label>
                      <div class="control">
-                         <input class="input" name="guests" type="number" placeholder="120" v-model.lazy="guests">
+                         <input class="input" name="guests" type="number" placeholder="120" value="Guests" v-model.lazy="guests">
                      </div>      
                 </div>
 
