@@ -1,9 +1,20 @@
 <template>
-  <Navbar />
 
-  <router-view />
-  
+
+
+  <Navbar />
+<router-view v-slot="{ Component, route }">
+  <transition name="fade" mode="out-in">
+    <component :is="Component" :key="route.path" />
+  </transition>
+</router-view>
+ 
   <Footer />
+
+
+
+
+  
 </template>
 
 <script>
@@ -36,6 +47,17 @@ export default {
 
 body {
   overflow-x: hidden ;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 </style>

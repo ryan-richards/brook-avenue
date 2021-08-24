@@ -1,6 +1,8 @@
 <template>
 
-<div class="container">
+<div>
+
+  <div class="container">
   <div class="columns">
 
         <div class="column">
@@ -25,7 +27,9 @@
   </div>
 </div>
 
-<BlockLeft 
+
+
+  <BlockLeft 
 title="Homemade Gelato" 
   subtitle="Choose from over 300 flavours"
   content="
@@ -35,6 +39,9 @@ title="Homemade Gelato"
   imageurl="https://brookavenue.files.wordpress.com/2019/07/d6ed5860-afa4-4846-bab4-60f49c484add.jpg?w=720"/>
 
 <Quote quote-message="Use our online calculator to generate a quote" subtitle="We cater events of any size" button-text="Get Quote"/>
+
+</div>
+
 
 
 </template>

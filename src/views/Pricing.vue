@@ -1,6 +1,10 @@
 <template>
-    <div class="pt-6"></div>
-    <BlockLeft title="Wedding or Corporate?" subtitle="We cater events of all sizes"
+
+ <div>
+    <div class="pt-2"></div>
+   
+
+<BlockLeft title="Wedding or Corporate?" subtitle="We cater events of all sizes"
    buttonText="Generate Quote"
    content=" 
     <p> 
@@ -15,6 +19,11 @@
     "
     imageurl="https://brookavenue.files.wordpress.com/2019/10/64b3aeff-2edb-4777-bd23-16a4f8563500.jpg?w=720"
      />
+<div class="container">
+<hr />
+</div>
+
+
     <BlockLeft title="Pick some flavours." subtitle="Endless possibilities"
     buttonText="See Full List"
     content=" <p>
@@ -26,6 +35,9 @@
     imageurl="https://brookavenue.files.wordpress.com/2019/10/3bc4264d-8e87-4477-8d47-441e1f5afa67.jpg?w=1024"
     />
     <QuoteForm />
+
+    </div>
+
 </template>
 
 <script>

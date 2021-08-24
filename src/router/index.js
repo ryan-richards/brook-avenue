@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Pricing from '../views/Pricing.vue'
+import Contact from '../views/Contact.vue'
 
 const routes = [
     {
@@ -19,15 +20,23 @@ const routes = [
         name: 'Pricing',
         component: Pricing
     },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact
+    }
 
 ]
 
 const router = createRouter({
     history: createWebHistory(),
     routes,
-    scrollBehavior (to, from, savedPosition){
-    return {x:0,y:0}
-    }
+    scrollBehavior (to, from, savedPosition) {
+        return {
+           left: 0, top: 0,
+           behavior: 'smooth',
+        }
+      }
 })
 
 export default router

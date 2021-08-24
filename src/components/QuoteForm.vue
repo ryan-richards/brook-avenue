@@ -34,17 +34,21 @@
 
                 <div class="field is-grouped">
                     <div class="control">
-                        <button type="submit" @click="showQuote = !showQuote" class="button">Generate</button>
+                        <button type="submit" @click="showQuote = !showQuote" class="button" :disabled="showQuote">Generate</button>
                     </div>
                 </div>
             </form>
         </div>
         <div class="column center">
+             <transition appear name="fade"> 
                 <div v-if="showQuote" class="block pb-6">
+                   
                     <div class="title">£ {{guests*1.8}}</div>
                     <div v-if="guests > 200" class="subtitle"> 6 Flavours</div>
                     <div v-else>4 Flavours</div>
+                   
                 </div>
+                 </transition>
         </div>
     </div>
 </div>
@@ -119,6 +123,17 @@ export default {
 	justify-content: center;
 	align-items: center;
   background-color: transparent;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 </style>

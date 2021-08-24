@@ -4,7 +4,7 @@
     <div class="hero">
     <div class="hero-body has-text-left">
     <div class="title">{{ quoteMessage }}</div>
-    <div class="subtitle pt-1">{{ subtitle }}</div>
+    <div class="subtitle pt-3">{{ subtitle }}</div>
             <div class="buttons ">
               <router-link to="/pricing">
                  <a class="button">{{ buttonText }}</a>
@@ -51,7 +51,7 @@ export default {
     margin-right: -2rem;
     padding-right: 3rem;
     padding-left: 3rem;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
 }
 
 
