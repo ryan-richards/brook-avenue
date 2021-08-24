@@ -7,4 +7,4 @@ To-do:
  - Install supabase for email form submission.
  - Blog page, fetch posts from supabase.
 
-Hosted with Netlify - brookavenue.netlify.app
+Hosted with Netlify - https://brookavenue.netlify.app
