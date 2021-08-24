@@ -1,7 +1,8 @@
 <template>
 
+<div class="wrapper">
 
-<div class="container">
+    <div class="container">
     <div class="columns">
         <div class="column content has-text-left">
             <div class="title">Pricing.</div>
@@ -52,6 +53,9 @@
         </div>
     </div>
 </div>
+
+</div>
+
 
 
     
@@ -123,6 +127,10 @@ export default {
 	justify-content: center;
 	align-items: center;
   background-color: transparent;
+}
+
+.wrapper{
+    padding-bottom: 5rem;
 }
 
 .fade-enter-active,

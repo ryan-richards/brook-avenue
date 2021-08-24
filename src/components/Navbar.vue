@@ -5,7 +5,7 @@
     <nav class="navbar mobilePadding">
    <div class="navbar-brand">
        <router-link to="/">
-        <a class="navbar-item mr-6 has-text-left">
+        <a @click="close" class="navbar-item mr-6 has-text-left">
             <div>
             <h1 style="font-weight:800;">Brook Avenue</h1>
             <h2>Artisan Gelato</h2>
@@ -49,6 +49,11 @@ export default {
     methods: {
         toggle(){
          this.isActive = !this.isActive
+        },
+        close() {
+            if (this.isActive){
+            this.isActive = !this.isActive
+            } 
         }
     },
 }
