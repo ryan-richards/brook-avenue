@@ -8,7 +8,6 @@
     <component :is="Component" :key="route.path" />
   </transition>
 </router-view>
- 
   <Footer />
 
 
@@ -44,6 +43,7 @@ export default {
   padding-left:1rem;
   padding-right: 1rem;
 }
+
 
 body {
   overflow-x: hidden ;

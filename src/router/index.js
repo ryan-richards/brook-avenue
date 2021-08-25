@@ -32,11 +32,21 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
     scrollBehavior (to, from, savedPosition) {
-        return {
-           left: 0, top: 0,
-           behavior: 'smooth',
+        if (to.hash) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                  resolve({
+                      el: to.hash,
+                      behavior: 'smooth',
+                    })
+                }, 500)
+              })
+            } else {
+          return {left: 0, top: 0, behavior: 'smooth'}
         }
-      }
+    
+    }
 })
 
 export default router
+

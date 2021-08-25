@@ -8,24 +8,24 @@
   <div class="column has-text-left">
   <p>Brook Avenue</p>
   <p>hello@brookavenue.co.uk</p>
-  <p>Legal © 2021</p>
+  <p>Terms & Conditions © 2021</p>
   </div>
   <div class="column has-text-left">
     <div class="columns is-mobile">
       <div class="column">
-        <p><strong>Who we are</strong></p>
+        <p><strong>Behind the scenes.</strong></p>
         <ul>
-          <li><a href="/">About</a></li>
-          <li><a href="/">Team</a></li>
-          <li><a href="/">Contact</a></li>
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/about">Team</router-link></li>
+          <li><router-link to="/about">Process</router-link></li>
         </ul>
       </div>
       <div class="column">
-        <p><strong>Things we do</strong></p>
+        <p><strong>Things we do.</strong></p>
           <ul>
-          <li><a href="/">Flavours</a></li>
-          <li><a href="/">Process</a></li>
-          <li><a href="/">Events</a></li>
+            <li><router-link to="/about">Flavours</router-link></li>
+            <li><router-link to="/about">Services</router-link></li>
+            <li><router-link to="/about">About</router-link></li>
         </ul>
       </div>
     </div>

@@ -27,18 +27,56 @@
   </div>
 </div>
 
+<Content>
+
+    <template v-slot:title>
+      <div class="title">Homemade AAH Gelato</div>
+    </template>
+
+    <template v-slot:subtitle>
+      <div class="subtitle">Choose from over 300 flavours</div>
+    </template>
+
+    <template v-slot:content>
+      <div>
+      <p>We have a wide range of flavour suggestions, but you are in control, if your favourite flavour is Honeycomb or if something more unique like Jawbox Gin & Ginger hits the spot we got you covered.</p>
+      <p class='pt-2'>We love experimenting with new flavour combinations so if you don’t see your favourite on our flavour list just get in touch and let us custom make your flavour choice.</p>
+      </div>
+    </template>
+
+    <template v-slot:button>
+      <div @click="flavours" class="button">Explore Flavours</div>
+    </template>
+
+    <template v-slot:image>
+      <img src="https://brookavenue.files.wordpress.com/2019/07/d6ed5860-afa4-4846-bab4-60f49c484add.jpg?w=720" class="src" />
+    </template>
 
 
-  <BlockLeft 
-title="Homemade Gelato" 
-  subtitle="Choose from over 300 flavours"
-  content="
-  <p>We have a wide range of flavour suggestions, but you are in control, if your favourite flavour is Honeycomb or if something more unique like Jawbox Gin & Ginger hits the spot we got you covered.</p>
-   <p class='pt-2'>We love experimenting with new flavour combinations so if you don’t see your favourite on our flavour list just get in touch and let us custom make your flavour choice.</p>"
-  button-text="Explore Flavours" 
-  imageurl="https://brookavenue.files.wordpress.com/2019/07/d6ed5860-afa4-4846-bab4-60f49c484add.jpg?w=720"/>
+</Content>
+
+
+<div class="modal" v-bind:class="{'is-active': isActive, 'toggle-off': !isActive}">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button @click="flavours" class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Save changes</button>
+      <button class="button">Cancel</button>
+    </footer>
+  </div>
+</div>
 
 <Quote quote-message="Use our online calculator to generate a quote" subtitle="We cater events of any size" button-text="Get Quote"/>
+
+
+
 
 </div>
 
@@ -50,11 +88,25 @@ title="Homemade Gelato"
 
 import BlockLeft from '../components/BlockLeft.vue'
 import Quote from '../components/Quote.vue'
+import Content from '../components/Content.vue'
+
 
 export default {
   components: {
     BlockLeft,
-    Quote   
+    Quote,
+    Content,
+  },
+  data () {
+        return {
+            isActive: false
+        }
+    },
+  methods: {
+    flavours(){
+        console.log("fired")
+      this.isActive = !this.isActive
+    }
   }
 }
 
