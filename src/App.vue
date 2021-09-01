@@ -44,10 +44,6 @@ export default {
   padding-right: 1rem;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 
 body {
   overflow-x: hidden ;

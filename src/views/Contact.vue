@@ -8,12 +8,6 @@
             <div class="title">Contact</div>
             <div class="subtitle">Enter your details, and we will get back to you as soon as possible!</div>
             <form v-on:submit.prevent="handleSubmit" name="Quote">
-                 <div class="field">
-                     <label class="label">Name</label>
-                     <div class="control">
-                         <input class="input" name="name" type="text" placeholder="Name"  v-model="name">
-                     </div>      
-                </div>
                 <div class="field">
                      <label class="label">Email</label>
                      <div class="control">
@@ -38,21 +32,13 @@
                          <input class="input" name="guests" type="number" placeholder="120" v-model.lazy="guests">
                      </div>      
                 </div>
-                 <div class="field">
-                     <label class="label">Message</label>
-                     <div class="control">
-                         <input class="input" name="msg" type="text" placeholder="Any extra details"  v-model="msg">
-                     </div>      
-                </div>
 
                 <div class="field is-grouped">
                     <div class="control">
-                        <button type="submit" @click="sent = !sent" class="button" :disabled="sent">Submit</button>
+                        <button type="submit" class="button" :disabled="sent">Submit</button>
                     </div>
                 </div>
             </form>
-        </div>
-        <div class="column center">
         </div>
     </div>
 </div>
@@ -62,21 +48,48 @@
     
 </template>
 
+
 <script>
 
-import BlockLeft from '../components/BlockLeft.vue'
-import Quote from '../components/Quote.vue'
+
+import { ref } from "vue"
+import { supabase } from "../supabase"
 
 export default {
-  components: {
-    BlockLeft,
-    Quote   
-  },
   data () {
       return {
           sent: false
       }
-  }
-}
+  },
+    setup(){
+        console.log("loaded setup")
 
+        const email = ref("")
+        const venue = ref("")
+        const guests = ref("")
+        const date = ref("")
+
+        const handleSubmit = async () => {
+            try {   
+            const  { data, error } = await supabase
+            .from("new-inquiries")
+            .insert([
+            { email: email.value , venue: venue.value , guests: guests.value , date: date.value },
+            ])
+            if (error) throw error
+               console.log("inserted")
+             } catch (error) {
+                alert(error.error_description || error.message)
+             }
+           
+        } 
+        return {
+            email,
+            venue,
+            guests,
+            date,
+            handleSubmit,
+        }
+}
+}
 </script>

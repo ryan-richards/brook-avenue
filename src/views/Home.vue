@@ -75,9 +75,6 @@
 
 <Quote quote-message="Use our online calculator to generate a quote" subtitle="We cater events of any size" button-text="Get Quote"/>
 
-
-
-
 </div>
 
 

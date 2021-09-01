@@ -2,16 +2,16 @@
 
 <div class="wrapper">
 
-    <div class="container">
+<div class="container">
     <div class="columns">
         <div class="column content has-text-left">
             <div class="title">Pricing.</div>
             <div class="subtitle">Enter your details to generate quote.</div>
-            <form v-on:submit.prevent="handleSubmit" name="Quote" netlify>
+            <form v-on:submit.prevent="handleSubmit" name="Quote">
                 <div class="field">
                      <label class="label">Email</label>
                      <div class="control">
-                         <input class="input" name="email" type="email" placeholder="hello@email.com"  v-model="email">
+                         <input class="input" name="email" type="email" placeholder="hello@email.com"  v-model="email" required>
                      </div>      
                 </div>
                 <div class="field">
@@ -35,7 +35,7 @@
 
                 <div class="field is-grouped">
                     <div class="control">
-                        <button type="submit" @click="showQuote = !showQuote" class="button" :disabled="showQuote">Generate</button>
+                        <button type="submit" @click="showQuote = !showQuote" class="button">Generate</button>
                     </div>
                 </div>
             </form>
@@ -43,11 +43,9 @@
         <div class="column center">
              <transition appear name="fade"> 
                 <div v-if="showQuote" class="block pb-6">
-                   
-                    <div class="title">£ {{guests*1.8}}</div>
+                    <div class="title">£ {{250+guests*1.8}}</div>
                     <div v-if="guests > 200" class="subtitle"> 6 Flavours</div>
-                    <div v-else>4 Flavours</div>
-                   
+                    <div v-else>4 Flavours</div> 
                 </div>
                  </transition>
         </div>
@@ -71,7 +69,7 @@ import { supabase } from "../supabase"
 
 export default {
     el: '#Quote',
-    data : function () {
+    data() {
         return {
             guests: null,
             showQuote: false
@@ -80,15 +78,17 @@ export default {
 
     setup(){
 
+        console.log("loadeding pricing setup")
+
         const email = ref("")
         const venue = ref("")
         const guests = ref("")
         const date = ref("")
 
         const handleSubmit = async () => {
-            try {
-              const  { data, error } = await supabase
-            .from('new-inquiries')
+            try {   
+            const  { data, error } = await supabase
+            .from("new-inquiries")
             .insert([
             { email: email.value , venue: venue.value , guests: guests.value , date: date.value },
             ])
