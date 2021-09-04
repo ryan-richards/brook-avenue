@@ -35,7 +35,7 @@
 
                 <div class="field is-grouped">
                     <div class="control">
-                        <button type="submit" class="button" :disabled="sent">Submit</button>
+                        <button type="submit" class="button">Submit</button>
                     </div>
                 </div>
             </form>

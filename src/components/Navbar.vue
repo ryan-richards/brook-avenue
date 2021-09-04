@@ -25,6 +25,7 @@
         <div class="navbar-end">
         <router-link to="/about"><a    @click="toggle" class="navbar-item list pt-4">About</a></router-link>
         <router-link to="/pricing"><a  @click="toggle" class="navbar-item list pt-4">Pricing</a></router-link>
+        <router-link to="/blog"><a  @click="toggle" class="navbar-item list pt-4">Blog</a></router-link>
         <router-link to="/contact"><a  @click="toggle" class="navbar-item list pt-4">Contact</a></router-link>
             </div>
          </div>
