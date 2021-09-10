@@ -15,7 +15,6 @@
                   type="email"
                   placeholder="hello@email.com"
                   v-model="email"
-                  required
                 />
               </div>
             </div>
@@ -62,15 +61,15 @@
           </form>
         </div>
         <div class="column center has-text-left">
-          <div class="block pt-6">
+          <div class="block">
             <div class="block">
               <div class="title">Your Quote</div>
-              <div class="title"> {{ Math.round(250 + guests * 1.8) }} </div>
+              <div class="title">£ {{ Math.round(250 + guests * 1.8) }} </div>
               <div v-if="guests >= 200" class="subtitle">6 Flavours</div>
               <div class="subtitle" v-else>4 Flavours</div>
 
               <div class="subtitle mb-0">
-                Quote inlcludes travel within 10 miles of Belfast
+                Quote includes travel within 10 miles of Belfast.
               </div>
               <div class="subtitle">
                 For an exact quote, check your date is available below.
@@ -81,8 +80,10 @@
               <div class="control">
                 <button
                   @click="handleSubmit(), (isActive = !isActive)"
+                  title="Enter your email"
                   type="submit"
                   class="button"
+                  :disabled="!email"
                 >
                   Check my date
                 </button>
@@ -98,13 +99,14 @@
             <div class="modal-background"></div>
             <div class="modal-card">
               <header class="modal-card-head">
-                <p class="modal-card-title">Thank You.</p>
+                <p class="modal-card-title">Thank You</p>
                 <button class="delete" @click="isActive = !isActive" aria-label="close"></button>
               </header>
               <section class="modal-card-body">
-                <p>We will be in touch soon with a personalised quote and to let you know if your date is available</p>
+                <p>We will be in touch soon with a personalised quote and to let you know if your date is available.</p>
               </section>
               <footer class="modal-card-foot">
+                <router-link to="about" class="button">Our Story</router-link>
               </footer>
             </div>
           </div>

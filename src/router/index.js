@@ -4,6 +4,7 @@ import About from '../views/About.vue'
 import Pricing from '../views/Pricing.vue'
 import Contact from '../views/Contact.vue'
 import Blog from '../views/Blog.vue'
+import Post from '../views/Post.vue'
 
 const routes = [
     {
@@ -30,7 +31,10 @@ const routes = [
         path: '/blog',
         name: 'Blog',
         component: Blog
-    }
+    },
+    { path: '/post/:id', 
+      component: Post
+    },
 
 ]
 

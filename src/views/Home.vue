@@ -30,7 +30,7 @@
 <Content>
 
     <template v-slot:title>
-      <div class="title">Homemade AAH Gelato</div>
+      <div class="title">Homemade Gelato</div>
     </template>
 
     <template v-slot:subtitle>

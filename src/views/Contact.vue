@@ -7,7 +7,13 @@
         <div class="column content has-text-left">
             <div class="title">Contact</div>
             <div class="subtitle">Enter your details, and we will get back to you as soon as possible!</div>
-            <form v-on:submit.prevent="handleSubmit" name="Quote">
+            <form v-on:submit.prevent="handleSubmit" method="POST" data-netlify="true" name="contact">
+                <div class="field">
+                     <label class="label">Name</label>
+                     <div class="control">
+                         <input class="input" name="name" type="text" placeholder="Your Name"  v-model="name" required>
+                     </div>      
+                </div>
                 <div class="field">
                      <label class="label">Email</label>
                      <div class="control">
@@ -27,10 +33,8 @@
                      </div>      
                 </div>
                   <div class="field">
-                     <label class="label">Number of Guests</label>
-                     <div class="control">
-                         <input class="input" name="guests" type="number" placeholder="120" v-model.lazy="guests">
-                     </div>      
+                     <label class="label">Message</label>
+                     <textarea class="textarea" placeholder="Your message" rows="5" v-model="message"></textarea>    
                 </div>
 
                 <div class="field is-grouped">
@@ -66,27 +70,34 @@ export default {
 
         const email = ref("")
         const venue = ref("")
-        const guests = ref("")
         const date = ref("")
+        const name = ref("")
+        const message = ref("")
 
         const handleSubmit = async () => {
             try {   
             const  { data, error } = await supabase
-            .from("new-inquiries")
+            .from("contact")
             .insert([
-            { email: email.value , venue: venue.value , guests: guests.value , date: date.value },
+            { email: email.value , venue: venue.value , date: date.value , name:name.value, message:message.value},
             ])
             if (error) throw error
                console.log("inserted")
+               name.value = ""
+               email.value = ""
+               venue.value = ""
+               date.value = ""
+               message.value = ""
              } catch (error) {
                 alert(error.error_description || error.message)
              }
            
         } 
         return {
+            name,
+            message,
             email,
             venue,
-            guests,
             date,
             handleSubmit,
         }
