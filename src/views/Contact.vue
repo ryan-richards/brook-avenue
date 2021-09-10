@@ -7,7 +7,8 @@
         <div class="column content has-text-left">
             <div class="title">Contact</div>
             <div class="subtitle">Enter your details, and we will get back to you as soon as possible!</div>
-            <form v-on:submit.prevent="handleSubmit" method="POST" data-netlify="true" name="contact">
+            <form v-on:submit.prevent="handleSubmit" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
+                <input type="hidden" name="form-name" value="contact" />
                 <div class="field">
                      <label class="label">Name</label>
                      <div class="control">
