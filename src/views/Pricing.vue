@@ -88,6 +88,7 @@ import BlockLeft from '../components/BlockLeft.vue'
 import BlockRight from '../components/BlockRight.vue'
 import QuoteForm from '../components/QuoteForm.vue'
 import Content from '../components/Content.vue'
+import { useHead } from '@vueuse/head'
 
 export default {
   components: {
@@ -95,6 +96,16 @@ export default {
     QuoteForm,
     BlockRight,
     Content
+  },
+  setup(){
+      useHead({
+          title:'Pricing',
+          meta:[{
+              title: 'description',
+              content: 'Pricing information page'
+          }
+          ]
+      })
   }
 }
 </script>

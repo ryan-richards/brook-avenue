@@ -35,11 +35,24 @@ import BlockLeft from '../components/BlockLeft.vue'
 import BlockRight from '../components/BlockRight.vue'
 import Quote from '../components/Quote.vue'
 
+import {useHead } from '@vueuse/head'
+
 export default {
   components: {
     BlockLeft,
     Quote,
     BlockRight  
+  }, 
+  setup(){
+    useHead({
+      title: "About",
+      meta:[
+        {
+          name: 'description',
+          content: "About brook avenue gelato"
+        }
+      ]
+    })
   }
 }
 </script>

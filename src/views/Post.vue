@@ -29,6 +29,8 @@ import formatDateMixin from "../mixins/formatDateDayJs.js";
 import { onMounted, ref } from "vue";
 import { supabase } from "../supabase";
 import { useRoute } from "vue-router";
+import { useHead } from '@vueuse/head';
+import { defineComponent, computed, reactive } from 'vue'
 
 export default {
   name: "Post",
@@ -42,11 +44,12 @@ export default {
   components: {
     Markdown,
   },
+  
   setup() {
     const route = useRoute();
     const post = ref([]);
 
-    async function getEvent() {
+   async function getEvent() {
       const { data, error } = await supabase
         .from("blog-posts")
         .select("*")
@@ -63,6 +66,15 @@ export default {
     onMounted(() => {
       getEvent();
     });
+
+    useHead({
+      title: computed(() => post.value.title),
+      meta:[{
+        title: 'description',
+        content: computed(() => post.value.short)
+        }
+      ]
+      })
 
     return {
       post,

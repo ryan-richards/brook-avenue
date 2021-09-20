@@ -19,8 +19,19 @@
 <script>
 import { supabase } from "../supabase";
 import PostItem from "../components/PostItem.vue";
+import { useHead } from '@vueuse/head';
 
 export default {
+    setup(){
+      useHead({
+          title:'Blog',
+          meta:[{
+              title: 'description',
+              content: 'Brook Avenue Blog'
+          }
+          ]
+      })
+  },
   components: {
     PostItem,
   },

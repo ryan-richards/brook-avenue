@@ -86,7 +86,7 @@
 import BlockLeft from '../components/BlockLeft.vue'
 import Quote from '../components/Quote.vue'
 import Content from '../components/Content.vue'
-
+import { useHead } from '@vueuse/head'
 
 export default {
   components: {
@@ -104,6 +104,15 @@ export default {
         console.log("fired")
       this.isActive = !this.isActive
     }
+  },
+  setup(){
+    useHead({
+      title: "Home",
+      meta: [{
+        name: 'description',
+        content: 'Brook Avenue homemade gelato ice cream cart, for hire across Northern Ireland.'
+      }]
+    })
   }
 }
 
