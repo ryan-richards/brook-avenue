@@ -1,10 +1,5 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Pricing from '../views/Pricing.vue'
-import Contact from '../views/Contact.vue'
-import Blog from '../views/Blog.vue'
-import Post from '../views/Post.vue'
 
 const routes = [
     {
@@ -15,25 +10,25 @@ const routes = [
     {
         path: '/about',
         name: 'About',
-        component: About
+        component: () => import(/* webpackChunkName: "about" */ "../views/About.vue")
     },
     {
         path: '/pricing',
         name: 'Pricing',
-        component: Pricing
+        component: () => import(/*webpackChunkName: "pricing" */"../views/Pricing.vue")
     },
     {
         path: '/contact',
         name: 'Contact',
-        component: Contact
+        component: () => import(/*webpackChunkName: "contact" */"../views/Contact.vue")
     },
     {
         path: '/blog',
         name: 'Blog',
-        component: Blog
+        component: () => import(/*webpackChunkName: "Blog" */"../views/Blog.vue")
     },
     { path: '/post/:id', 
-      component: Post
+      component: () => import(/*webpackChunkName: "post" */"../views/Post.vue")
     },
 
 ]
