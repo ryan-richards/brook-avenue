@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import Markdown from "vue3-markdown-it";
 import formatDateMixin from "../mixins/formatDateDayJs.js";
 
 export default {
@@ -29,9 +28,6 @@ export default {
     content: String,
     short: String,
     thumbnail: String,
-  },
-  components: {
-    Markdown,
   },
   mixins: [formatDateMixin],
   computed: {

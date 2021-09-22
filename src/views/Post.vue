@@ -11,9 +11,7 @@
             <div class="title mb-2">{{ post.title }}</div>
             <p class="heading">{{ formatDate(post.created_at) }}</p>
           </span>
-          <div class="content">
-            <Markdown :html="true" :linkify="true" :source="post.content" />
-          </div>
+          <div class="content" v-html="post.content"></div>
         </div>
         </transition>
       </div>
@@ -24,13 +22,13 @@
 </template>
 
 <script>
-import Markdown from "vue3-markdown-it";
 import formatDateMixin from "../mixins/formatDateDayJs.js";
 import { onMounted, ref } from "vue";
 import { supabase } from "../supabase";
 import { useRoute } from "vue-router";
 import { useHead } from '@vueuse/head';
-import { defineComponent, computed, reactive } from 'vue'
+import { computed} from 'vue'
+import marked from 'marked'
 
 export default {
   name: "Post",
@@ -41,13 +39,10 @@ export default {
     created_at: String,
     content: String,
   },
-  components: {
-    Markdown,
-  },
-  
   setup() {
     const route = useRoute();
     const post = ref([]);
+
 
    async function getEvent() {
       const { data, error } = await supabase
@@ -60,6 +55,7 @@ export default {
         console.error(error);
       } else {
         post.value = data;
+        post.value.content = marked(data.content)
       }
     }
 
@@ -85,7 +81,10 @@ export default {
     formattedDate() {
       return this.formatDate(this.date);
     },
-  },
+    formatMarkdown(){
+      return marked(this.content)
+    }
+  }
 };
 </script>
 
@@ -100,14 +99,13 @@ export default {
     opacity: 0;
   }
   .list-enter-active {
-    transition: opacity 1.5s ease;
+    transition: opacity 0.6s ease;
   }
   .list-leave-to {
     opacity: 0;
-    transform: scale(0.6);
   }
   .list-leave-active {
-    transition: all 0.4s ease;
+    transition: opacity 0.4s ease;
     position: absolute; /* for move transition after item leaves */
   }
 

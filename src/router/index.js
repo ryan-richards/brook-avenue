@@ -1,6 +1,4 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import defineAsyncComponent from 'vue'
-
 import Home from '../views/Home.vue'
 
 const routes = [
@@ -12,25 +10,25 @@ const routes = [
     {
         path: '/about',
         name: 'About',
-        component: defineAsyncComponent(() => import("../views/About.vue"))
+        component: () => import("../views/About.vue")
     },
     {
         path: '/pricing',
         name: 'Pricing',
-        component: defineAsyncComponent(() => import("../views/Pricing.vue"))
+        component: () => import("../views/Pricing.vue")
     },
     {
         path: '/contact',
         name: 'Contact',
-        component: defineAsyncComponent(() => import("../views/Contact.vue"))
+        component: () => import("../views/Contact.vue")
     },
     {
         path: '/blog',
         name: 'Blog',
-        component: defineAsyncComponent(() => import("../views/Blog.vue"))
+        component: () => import("../views/Blog.vue")
     },
     { path: '/post/:id', 
-      component: defineAsyncComponent(() => import("../views/post.vue"))
+      component: () => import("../views/post.vue")
     },
 
 ]
