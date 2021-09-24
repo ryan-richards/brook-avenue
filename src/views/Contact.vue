@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="wrapper">
+  <div class="navMargin">
+    <div class="wrapper pb-6">
       <div class="container">
         <div class="columns">
           <div class="column content has-text-left">

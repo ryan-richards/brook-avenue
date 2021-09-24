@@ -1,5 +1,7 @@
 <template>
-<div class="wrapper">
+<div class="navMargin">
+
+  <div class="wrapper">
   <div class="container">
     <div class="columns">
       <div class="column is-two-thirds has-text-left">
@@ -18,6 +20,9 @@
     </div>
   </div>
 </div>
+
+</div>
+
 
 </template>
 

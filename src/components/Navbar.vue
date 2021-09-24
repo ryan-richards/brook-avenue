@@ -2,7 +2,7 @@
 
 <div class="container">
 
-    <nav class="navbar mobilePadding">
+<nav class="navbar pb-2 mobilePadding">
    <div class="navbar-brand">
        <router-link to="/">
         <a @click="close" class="navbar-item mr-6 has-text-left">
@@ -71,18 +71,26 @@ a.navbar-item:hover{
 
 .navbar-menu{
     box-shadow: none;
+    background-color:transparent;
+}
+
+.navbar-menu.is-active{
+    box-shadow: none;
+    background-color:white;
+}
+
+.navbar{
     background-color: transparent;
 }
+
+
+
 
 .container {
     margin-top: -1rem;
 }
 
 @media (max-width: 1024px) {
-
-
-
-
 	.mobilePadding{
 
 		margin-left: -0.6rem;
@@ -91,15 +99,9 @@ a.navbar-item:hover{
 
 
 @media screen and (min-width: 1024px) {
-
-
 	.mobilePadding{
-
 		padding-right: 1.8rem;
 	}
-
-
-
 }
 
 </style>

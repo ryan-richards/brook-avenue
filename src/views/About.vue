@@ -1,6 +1,6 @@
 <template>
 
-<div>
+<div class="navMargin">
     <div class="wrapper">
 
 <BlockLeft title="Our Story" subtitle="Three carts and counting"

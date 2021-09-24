@@ -3,7 +3,7 @@
     <div class="container">
     <div class="hero">
     <div class="hero-body has-text-left">
-    <div class="title">{{ quoteMessage }}</div>
+    <div class="title" style="font-size:1.5rem;">{{ quoteMessage }}</div>
     <div class="subtitle pt-3">{{ subtitle }}</div>
             <div class="buttons ">
               <router-link to="/pricing">
@@ -34,8 +34,8 @@ export default {
 }
 
 .button {
-  color: whitesmoke;
-  background-color:transparent;
+  color: rgb(0, 0, 0);
+  background-color:white;
 }
 
 .hero-body {
@@ -45,7 +45,6 @@ export default {
 }
 
 .wrapper{
-    margin-top: 6rem;
     background-color:rgb(190, 181, 186);
     margin-left: -2rem;
     margin-right: -2rem;
@@ -61,5 +60,7 @@ export default {
 	align-items: center;
   background-color: transparent;
 }
+
+
 
 </style>

@@ -63,16 +63,15 @@
         <div class="column center has-text-left">
           <div class="block">
             <div class="block">
-              <div class="title">Your Quote</div>
-              <div class="title">£ {{ Math.round(250 + guests * 1.8) }} </div>
-              <div v-if="guests >= 200" class="subtitle">6 Flavours</div>
-              <div class="subtitle" v-else>4 Flavours</div>
+              <div class="title">Estimated Quote</div>
+              <div v-if="guests" class="title">£ {{ Math.round(270 + guests * 1.5) }} </div>
+              <div v-else class="title">£ 0</div>
 
-              <div class="subtitle mb-0">
-                Quote includes travel within 10 miles of Belfast.
+              <div class="subtitle mt-4 mb-0">
+                Quote includes travel within 20 miles of Belfast.
               </div>
-              <div class="subtitle">
-                For an exact quote, check your date is available below.
+              <div class="subtitle mt-2">
+                For an exact quote, click below.
               </div>
             </div>
 
@@ -106,7 +105,6 @@
                 <p>We will be in touch soon with a personalised quote and to let you know if your date is available.</p>
               </section>
               <footer class="modal-card-foot">
-                <router-link to="about" class="button">Our Story</router-link>
               </footer>
             </div>
           </div>

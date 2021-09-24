@@ -33,17 +33,32 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Libre Baskerville', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #000000;
   margin-top: 30px;
   padding-left:1rem;
   padding-right: 1rem;
 }
 
+p{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+a{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+.subtitle {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
 
 body {
   overflow-x: hidden ;
@@ -59,5 +74,4 @@ body {
 .fade-leave-to {
   opacity: 0;
 }
-
 </style>
