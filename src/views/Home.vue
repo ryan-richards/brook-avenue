@@ -94,13 +94,13 @@
       <a href="https://www.instagram.com/brookavenue/">@brookavenue</a>
       <div class="columns pl-3 pr-3 pt-4 is-mobile">
         <div class="column">
-          <img class="square" src="../assets/insta-1.JPG" alt="" />
+          <img class="square" src="" alt="" />
         </div>
         <div class="column">
-          <img class="square" src="../assets/insta-2.jpg" alt="" />
+          <img class="square" src="" alt="" />
         </div>
         <div class="column">
-          <img class="square" src="../assets/insta-3.jpg" alt="" />
+          <img class="square" src="" alt="" />
         </div>
       </div>
     </div>
