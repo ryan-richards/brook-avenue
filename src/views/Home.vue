@@ -211,7 +211,7 @@ a {
 }
 
 .block1 {
-  background: black url("../assets/brook-13.jpg") center / cover;
+  background: black url("../assets/brook-13-mobile.jpg") center / cover;
   margin-left: -3rem;
   margin-right: -3rem;
   background-position: center;
@@ -256,7 +256,7 @@ a {
 
 @media (max-width: 768px) {
   .home {
-    background: black url("../assets/brook-13.jpg") center / cover;
+    background: black url("../assets/brook-13-mobile.jpg") center / cover;
     margin-left: -3rem;
     margin-right: -3rem;
 }
