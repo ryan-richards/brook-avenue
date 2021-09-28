@@ -33,7 +33,7 @@
 
       <div class="center">
         <div class="image pt-6">
-          <img src="../assets/brookBW-1.jpg" alt="" style="max-width: 80vh" />
+          <img src="../assets/brookBW-1.webp" alt="" style="max-width: 80vh" />
         </div>
       </div>
 
@@ -56,7 +56,7 @@
 
     <div class="center">
         <div class="image pt-4 pb-6">
-          <img src="../assets/brook-25.jpg" alt="" style="max-width: 80vh" />
+          <img src="../assets/brook-cart.webp" alt="" style="max-width: 80vh" />
         </div>
     </div>
 
@@ -240,7 +240,7 @@ a {
 }
 
 .block1 {
-  background: black url("../assets/brook-9.jpg") center / cover;
+  background: black url("../assets/brook-9.webp") center / cover;
   margin-left: -3rem;
   margin-right: -3rem;
   background-position: center;
@@ -251,7 +251,7 @@ a {
 }
 
 .block2 {
-  background: black url("../assets/brook-5.jpg") center / cover;
+  background: black url("../assets/brook-5.webp") center / cover;
   margin-left: -3rem;
   margin-right: -3rem;
   background-position: center;
@@ -270,14 +270,14 @@ a {
 }
 
 .home {
-  background: black url("../assets/brook-13.jpg") center / cover;
+  background: black url("../assets/brook-13.webp") center / cover;
   margin-left: -3rem;
   margin-right: -3rem;
 }
 
 @media (max-width: 1024px) {
   .home {
-    background: black url("../assets/brook-13.jpg") center / cover;
+    background: black url("../assets/brook-13.webp") center / cover;
     margin-left: -3rem;
     margin-right: -3rem;
   }
@@ -285,7 +285,7 @@ a {
 
 @media (max-width: 768px) {
   .home {
-    background: black url("../assets/brook-13-mobile.jpg") center / cover;
+    background: black url("../assets/brook-13.webp") center / cover;
     margin-left: -3rem;
     margin-right: -3rem;
   }
