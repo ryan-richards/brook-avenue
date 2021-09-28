@@ -8,7 +8,7 @@
           <slot name="content"></slot>
         </div>
         <div class="buttons center">
-          <slot name="button"> </slot>
+          <slot name="button"></slot>
         </div>
       </div>
       <div class="column center">

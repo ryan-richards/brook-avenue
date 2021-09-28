@@ -59,30 +59,23 @@
 
       <template v-slot:content>
         <div>
-
-              <p>
-                Booking one of our three gelato carts couldnt be easier. Once
-                your date is confirmed, it's time to pick your flavours!
-              </p>
-              <div class="buttons">
-                <div class="button">
-                  Randomise
-                </div>
-              </div>
-            
+          <p>
+            Booking one of our three gelato carts couldnt be easier. Once your
+            date is confirmed, it's time to pick your flavours!
+          </p>
+          <div class="buttons">
+            <div class="button" @click="randomise">
+              <p>Randomise</p>
+            </div>
+          </div>
         </div>
       </template>
       <template v-slot:contentRight>
-        
-              <div class="block has-text-centered">
-                <ul style="list-style: none; margin-left: 0">
-                  <li>Honeycomb</li>
-                  <li>Raspberry & White Chocolate</li>
-                  <li>Lemon Meringue</li>
-                  <li>Guinness & Chocolate ...</li>
-                </ul>
-              </div>
-         
+        <div class="block blob has-text-centered">
+          <ul  v-for="flavour in flavourList" :key="flavour.id" style="list-style: none; margin-left: 0">
+            <li>{{ flavour.Flavours }}</li>
+          </ul>
+        </div>
       </template>
     </ContentFlavour>
     <div class="container">
@@ -130,7 +123,7 @@
       </template>
     </Content>
 
-        <div class="container">
+    <div class="container">
       <hr />
     </div>
 
@@ -147,6 +140,8 @@ import QuoteForm from "../components/QuoteForm.vue";
 import Content from "../components/Content.vue";
 import { useHead } from "@vueuse/head";
 import ContentFlavour from "../components/ContentFlavour.vue";
+import { ref, onMounted } from "vue";
+import { supabase } from "../supabase";
 
 export default {
   components: {
@@ -157,6 +152,10 @@ export default {
     ContentFlavour,
   },
   setup() {
+    const randomList = ref([]);
+    const randomNumber = ref("");
+    const flavourList = ref([])
+
     useHead({
       title: "Pricing",
       meta: [
@@ -166,12 +165,43 @@ export default {
         },
       ],
     });
+
+    async function randomise() {
+      randomList.value = [];
+      for (let i = 0; i < 4; i++) {
+        randomNumber.value = Math.floor(Math.random() * 60 + 1);
+        if(randomList.value.includes(randomNumber.value)){
+          randomNumber.value = Math.floor(Math.random() * 60 + 1);
+          randomList.value.push(randomNumber.value);
+        } else {
+          randomList.value.push(randomNumber.value);
+        }
+      }
+      let { data, error } = await supabase
+      .from('flavours')
+      .select('*')
+      .in('id', randomList.value)
+      flavourList.value = data
+    }
+
+    onMounted(() => {
+     randomise()
+    })
+
+    return {
+      randomList,
+      randomNumber,
+      randomise,
+      flavourList,
+    }
+
+
+
   },
 };
 </script>
 
 <style>
-
 .center,
 .center-column,
 .top,
@@ -184,5 +214,9 @@ export default {
   background-color: transparent;
 }
 
-
+.blob {
+  background-color: rgba(238, 188, 227, 0.664);
+  padding: 8%;
+  border-radius: 41% 59% 69% 31% / 51% 34% 66% 49%;
+}
 </style>

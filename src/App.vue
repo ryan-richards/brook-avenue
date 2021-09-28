@@ -74,4 +74,8 @@ body {
 .fade-leave-to {
   opacity: 0;
 }
+
+li{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
 </style>

@@ -5,7 +5,7 @@
 
     <div class="buttons center" style="margin-top:-1rem;">
         <div class="button">
-          <p style="font-size:1.2em;font-weight: 800;">Get Quote</p>
+          <p style="font-size:1.2em;font-weight: 500;">Get Quote</p>
         </div>
       </div>
 
@@ -189,6 +189,16 @@ export default {
 
 a {
   color: rgb(60, 102, 72);
+}
+
+.button{
+  border-radius: 0;
+  outline-color: transparent;
+}
+
+.button:hover{
+  background-color: rgb(185, 185, 185);
+  color:black;
 }
 
 .halfHome {
