@@ -9,6 +9,19 @@
   <p>Brook Avenue</p>
   <p>hello@brookavenue.co.uk</p>
   <p>Terms & Conditions © 2021</p>
+
+<div class="block pt-3">
+  <a href="https://www.facebook.com/brookavenuegelato">
+<span class="iconify" data-icon="akar-icons:facebook-fill" data-width="22" data-height="22"></span>
+  </a>
+  <a href="https://www.instagram.com/brookavenue/">
+     <span class="iconify pl-1" data-icon="akar-icons:instagram-fill" data-width="22" data-height="22"></span>
+  </a>
+  <router-link to="/contact">
+   <span class="iconify pl-1" data-icon="akar-icons:send" data-width="22" data-height="22"></span>
+  </router-link>
+</div>
+
   </div>
   <div class="column has-text-left">
     <div class="columns is-mobile">
@@ -23,9 +36,9 @@
       <div class="column">
         <p><strong>Things we do.</strong></p>
           <ul>
-            <li><router-link to="/about">Flavours</router-link></li>
-            <li><router-link to="/about">Services</router-link></li>
-            <li><router-link to="/about">About</router-link></li>
+            <li><router-link to="/pricing">Flavours</router-link></li>
+            <li><router-link to="/pricing">Services</router-link></li>
+            <li><router-link to="/contact">Contact</router-link></li>
         </ul>
       </div>
     </div>

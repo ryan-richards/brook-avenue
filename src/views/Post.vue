@@ -13,7 +13,7 @@
             <div class="title mb-2">{{ post.title }}</div>
             <p class="heading">{{ formatDate(post.created_at) }}</p>
           </span>
-          <div class="content" v-html="post.content"></div>
+          <div class="content pb-6" v-html="post.content"></div>
         </div>
         </transition>
       </div>

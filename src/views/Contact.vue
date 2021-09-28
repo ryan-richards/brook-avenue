@@ -76,6 +76,10 @@
                 </div>
               </div>
             </form>
+
+            <div v-show="sent" class="pt-4">
+              <p>Your message has been submitted, we will be in touch soon!</p>
+            </div>
           </div>
         </div>
       </div>
@@ -92,11 +96,6 @@ import { supabase } from "../supabase"
 import { useHead } from '@vueuse/head';
 
 export default {
-  data () {
-      return {
-          sent: false
-      }
-  },
     setup(){
         console.log("loaded setup")
 
@@ -105,6 +104,7 @@ export default {
         const date = ref("")
         const name = ref("")
         const message = ref("")
+        const sent = ref(false)
 
         useHead({
       title: 'Contact',
@@ -123,7 +123,7 @@ export default {
             { email: email.value , venue: venue.value , date: date.value , name:name.value, message:message.value},
             ])
             if (error) throw error
-               console.log("inserted")
+               sent.value = true
                name.value = ""
                email.value = ""
                venue.value = ""
@@ -142,6 +142,7 @@ export default {
             venue,
             date,
             handleSubmit,
+            sent
         }
 }
 }

@@ -72,9 +72,11 @@
       </template>
       <template v-slot:contentRight>
         <div class="block blob has-text-centered">
-          <ul  v-for="flavour in flavourList" :key="flavour.id" style="list-style: none; margin-left: 0">
+          <transition-group name="list" appear>
+          <ul v-for="flavour in flavourList" :key="flavour.id" style="list-style: none; margin-left: 0">
             <li>{{ flavour.Flavours }}</li>
           </ul>
+          </transition-group>
         </div>
       </template>
     </ContentFlavour>

@@ -56,7 +56,7 @@
             </div>
             <label class="checkbox">
                 <input type="checkbox" required>
-                <span>I agree to marketing permissons, contact me by email.</span>
+                <span> I agree to marketing permissons, contact me by email.</span>
             </label>
           </form>
         </div>
@@ -191,10 +191,6 @@ export default {
 }
 
 .title {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-}
-
-.label{
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 

@@ -40,3 +40,11 @@ export default {
   },
 };
 </script>
+
+<style>
+
+.title{
+  font-family: 'Libre Baskerville', serif;
+}
+
+</style>
