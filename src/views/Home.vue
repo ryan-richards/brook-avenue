@@ -128,7 +128,6 @@
 </template>
 
 <script>
-import BlockLeft from "../components/BlockLeft.vue";
 import Quote from "../components/Quote.vue";
 import Content from "../components/Content.vue";
 import { useHead } from "@vueuse/head";
@@ -136,7 +135,6 @@ import Test from "../components/Test.vue";
 
 export default {
   components: {
-    BlockLeft,
     Quote,
     Content,
     Test,
@@ -232,7 +230,8 @@ a {
 
 .square {
   object-fit: cover;
-  aspect-ratio: 5 / 5;
+  width:150px;
+  height: 150px;
 }
 
 .splitBlocks {

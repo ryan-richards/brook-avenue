@@ -63,9 +63,9 @@
         <div class="column center has-text-left">
           <div class="block">
             <div class="block">
-              <div class="title">Estimated Quote</div>
-              <div v-if="guests" class="title">£ {{ Math.round(270 + guests * 1.5) }} </div>
-              <div v-else class="title">£ 0</div>
+              <div class="title sans">Estimated Quote</div>
+              <div v-if="guests" class="title sans">£ {{ Math.round(270 + guests * 1.5) }} </div>
+              <div v-else class="title sans">£ 0</div>
 
               <div class="subtitle mt-4 mb-0">
                 Quote includes travel within 20 miles of Belfast.
@@ -190,7 +190,7 @@ export default {
   opacity: 0;
 }
 
-.title {
+.title.sans {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 

@@ -45,6 +45,7 @@
     </Content>
 
     <div class="container">
+
       <hr />
     </div>
 
@@ -136,8 +137,6 @@
 </template>
 
 <script>
-import BlockLeft from "../components/BlockLeft.vue";
-import BlockRight from "../components/BlockRight.vue";
 import QuoteForm from "../components/QuoteForm.vue";
 import Content from "../components/Content.vue";
 import { useHead } from "@vueuse/head";
@@ -147,9 +146,7 @@ import { supabase } from "../supabase";
 
 export default {
   components: {
-    BlockLeft,
     QuoteForm,
-    BlockRight,
     Content,
     ContentFlavour,
   },

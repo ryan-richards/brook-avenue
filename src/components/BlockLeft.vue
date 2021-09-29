@@ -8,29 +8,6 @@
         <div class="block">
           <div v-html="content"></div>
         </div>
-        <div class="buttons">
-          <a @click="flavours" class="button">{{ buttonText }}</a>
-        </div>
-
-
-  <div class="modal" v-bind:class="{'is-active': isActive, 'toggle-off': !isActive}">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Modal title</p>
-      <button @click="flavours" class="delete" aria-label="close"></button>
-    </header>
-    <section class="modal-card-body">
-      <!-- Content ... -->
-    </section>
-    <footer class="modal-card-foot">
-      <button class="button is-success">Save changes</button>
-      <button class="button">Cancel</button>
-    </footer>
-  </div>
-</div>
-
-
       </div>
       <div class="column center">
         <div class="image">
