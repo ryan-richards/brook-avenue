@@ -64,6 +64,9 @@
             Booking one of our three gelato carts couldnt be easier. Once your
             date is confirmed, it's time to pick your flavours!
           </p>
+          <p class="pt-1">
+            Use the ranomise button below to explore some of our artisan flavours!
+          </p>
           <div class="buttons">
             <div class="button" @click="randomise">
               <p>Randomise</p>

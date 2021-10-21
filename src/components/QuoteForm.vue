@@ -137,7 +137,7 @@ export default {
       try {
         const { data, error } = await supabase.from("new-inquiries").insert([
           {
-            email: email.value,
+            recipient: email.value,
             venue: venue.value,
             guests: guests.value,
             date: date.value,

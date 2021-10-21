@@ -16,7 +16,7 @@
           class="title has-text-centered headingBlock"
           style="font-weight: 800; font-size: 1.6em"
         >
-          Homemade gelato for your wedding
+          Homemade gelato for your wedding.
         </div>
       </div>
 
@@ -230,8 +230,8 @@ a {
 
 .square {
   object-fit: cover;
-  width:150px;
-  height: 150px;
+  width:140px;
+  height:140px;
 }
 
 .splitBlocks {
