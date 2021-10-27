@@ -1,6 +1,6 @@
 <template>
   <div class="navMargin">
-    <div class="pt-2"></div>
+    <div class="pt-6"></div>
 
     <Content>
       <template v-slot:title>
@@ -44,7 +44,7 @@
       </template>
     </Content>
 
-    <div class="container">
+    <div class="container pt-6 pb-6">
 
       <hr />
     </div>
@@ -84,7 +84,7 @@
         </div>
       </template>
     </ContentFlavour>
-    <div class="container">
+    <div class="container pt-6 pb-6">
       <hr />
     </div>
 
@@ -129,7 +129,7 @@
       </template>
     </Content>
 
-    <div class="container">
+    <div class="container pt-6 pb-6">
       <hr />
     </div>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="navMargin">
+  <div class="navMargin pt-6">
     <div class="wrapper pb-6">
       <div class="container">
         <div class="columns">

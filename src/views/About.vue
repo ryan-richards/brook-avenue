@@ -46,7 +46,7 @@
               </div>
             </div>
 
-            <div class="center pt-6">
+            <div class="center pt-6 pb-6">
               <div class="image">
                 <img
                   src="../assets/brook-9.webp"
@@ -55,6 +55,27 @@
                 />
               </div>
             </div>
+
+
+<div class="center">
+            <div class="card p-5">
+              
+             
+                  <div class="subtitle has-text-left">
+                10 Reasons to hire an ice cream cart for your Wedding!
+                  </div>
+                  <div class="">
+ <router-link :to="`/post/13`" class="button">Read Post</router-link>
+                  </div>
+                 
+ 
+                
+            </div>
+
+</div>
+
+
+
           </div>
         </template>
       </ContentBody>
@@ -90,3 +111,14 @@ export default {
   },
 };
 </script>
+
+<style>
+
+.card{
+  max-width:900px;
+  border: rgba(0, 0, 0, 0.158);
+  border-width: 2px;;
+  border-style: solid;
+}
+
+</style>

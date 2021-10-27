@@ -2,7 +2,19 @@
   <div>
     <div class="hero halfHome home"></div>
 
-    <div class="buttons center" style="margin-top: -1rem">
+    <div class="pt-4"></div>
+
+    <div class="block pt-6">
+      <div class="center pb-4">
+        <div
+          class="title has-text-centered headingBlock"
+          style="font-weight: 800; font-size: 1.6em"
+        >
+          Homemade gelato for your wedding
+        </div>
+      </div>
+
+    <div class="buttons center pt-4 pb-5">
       <router-link to="/pricing">
         <div class="button">
           <p style="font-size: 1.2em; font-weight: 500">Get Quote</p>
@@ -10,23 +22,13 @@
       </router-link>
     </div>
 
-    <div class="block pt-5">
-      <div class="center pb-6">
-        <div
-          class="title has-text-centered headingBlock"
-          style="font-weight: 800; font-size: 1.6em"
-        >
-          Homemade gelato for your wedding.
-        </div>
-      </div>
-
       <div class="center">
         <div class="has-text-left" style="max-width: 60vh">
           <p>
-            Brook Avenue is a family run business with years of experience making arguably the best gelato in Northern Ireland. 
+            If you're thinking of ways to add something special to your day, then say 'I do' to the freshest gelato you'll ever have. We provide bespoke homemade gelato for you and your guests served from our one of a kind custom built gelato cart. 
           </p>
-          <p class="pt-2">
-            Using all natural ingredients we make unique twists on the classics and have been known to experiment with some crazier flavour combinations. 
+          <p class="pt-4">
+           Keep guests occupied and entertained on arrival at your reception while you get your photos taken, or have us there as a fun surprise after your ceremony. We can even come along in the evening and cool your guests down after dancing all night. 
           </p>
         </div>
       </div>
@@ -42,13 +44,19 @@
           class="title has-text-centered headingBlock"
           style="font-weight: 800; font-size: 1.6em"
         >
-          Book a bicycle-cart, filled to the brim with artisan gelato.
+          Book a bicycle-cart, filled to the brim with artisan gelato
         </div>
       </div>
       <div class="center">
         <div class="has-text-left pt-6" style="max-width: 60vh">
           <p>
-            Our custom built carts have deliveried artisan gelato flavours to wedding guests across Northern Ireland. Wether your wedding is at a hotel, boujee barn or cosy back garden we can be there to serve a special treat to your guests. 
+           Many years of experimenting and perfecting our recipes means we've grown a long <router-link to="/pricing" style="text-decoration:underline;">list of flavours</router-link>. You and your partner get to choose four flavours from this list or go rogue and create your own. 
+          </p>
+          <p class="pt-4">
+           Our custom built carts have scooped artisan gelato to wedding guests across Northern Ireland & parts of Ireland. Whether your wedding is at a hotel, rustic barn or in a cosy back garden we are the perfect addition to any setting. 
+          </p>
+           <p class="pt-4">
+            <router-link to="/pricing" style="text-decoration:underline;">Find our pricing here.</router-link>
           </p>
         </div>
       </div>
@@ -209,12 +217,12 @@ a {
 }
 
 .button {
-  border-radius: 0;
+  border-radius: 10;
   outline-color: transparent;
 }
 
 .button:hover {
-  background-color: rgb(185, 185, 185);
+  background-color:rgb(123, 134, 124);
   color: black;
 }
 
@@ -269,14 +277,14 @@ a {
 }
 
 .home {
-  background: black url("../assets/brook-13.webp") center / cover;
+  background: black url("../assets/brook-13.jpg") center / cover;
   margin-left: -3rem;
   margin-right: -3rem;
 }
 
 @media (max-width: 1024px) {
   .home {
-    background: black url("../assets/brook-13.webp") center / cover;
+    background: black url("../assets/brook-13.jpg") center / cover;
     margin-left: -3rem;
     margin-right: -3rem;
   }
@@ -284,7 +292,7 @@ a {
 
 @media (max-width: 768px) {
   .home {
-    background: black url("../assets/brook-13.webp") center / cover;
+    background: black url("../assets/brook-13.jpg") center / cover;
     margin-left: -3rem;
     margin-right: -3rem;
   }

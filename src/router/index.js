@@ -22,11 +22,6 @@ const routes = [
         name: 'Contact',
         component: () => import("../views/Contact.vue")
     },
-    {
-        path: '/blog',
-        name: 'Blog',
-        component: () => import("../views/Blog.vue")
-    },
     { path: '/post/:id', 
       component: () => import("../views/Post.vue")
     },
