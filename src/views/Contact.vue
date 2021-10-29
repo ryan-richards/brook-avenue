@@ -120,7 +120,7 @@ export default {
             const  { data, error } = await supabase
             .from("contact")
             .insert([
-            { email: email.value , venue: venue.value , date: date.value , name:name.value, message:message.value},
+            { recipient: email.value , venue: venue.value , date: date.value , name:name.value, message:message.value},
             ])
             if (error) throw error
                sent.value = true
