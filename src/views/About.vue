@@ -34,15 +34,6 @@
                   classics and have been known to experiment with some crazier
                   flavour combinations.
                 </p>
-                <p class="pt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Minima nam mollitia itaque cumque rem earum maiores atque
-                  voluptates tenetur fugiat sint eius deleniti, commodi
-                  excepturi debitis perspiciatis aliquid est. Debitis et
-                  doloremque dolorum, quae deserunt a tempore optio modi qui
-                  neque est voluptates impedit, cumque officiis ad assumenda,
-                  maxime inventore?
-                </p>
               </div>
             </div>
 
@@ -56,26 +47,18 @@
               </div>
             </div>
 
-
-<div class="center">
-            <div class="card p-5">
-              
-             
-                  <div class="subtitle has-text-left">
-                10 Reasons to hire an ice cream cart for your Wedding!
-                  </div>
-                  <div class="">
- <router-link :to="`/post/13`" class="button">Read Post</router-link>
-                  </div>
-                 
- 
-                
+            <div class="center">
+              <div class="card p-5">
+                <div class="subtitle has-text-left">
+                  10 Reasons to hire an ice cream cart for your Wedding!
+                </div>
+                <div class="">
+                  <router-link :to="`/post/13`" class="button"
+                    >Read Post</router-link
+                  >
+                </div>
+              </div>
             </div>
-
-</div>
-
-
-
           </div>
         </template>
       </ContentBody>
@@ -113,12 +96,10 @@ export default {
 </script>
 
 <style>
-
-.card{
-  max-width:900px;
+.card {
+  max-width: 900px;
   border: rgba(0, 0, 0, 0.158);
-  border-width: 2px;;
+  border-width: 2px;
   border-style: solid;
 }
-
 </style>
