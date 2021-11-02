@@ -12,7 +12,7 @@
       </template>
 
       <template v-slot:content>
-        <div>
+        <div class="pt-2">
           <p>
             Welcome to Brook Avenue. We're here to add a unique touch of gelato
             magic to your special day as a treat for you and your guests.
