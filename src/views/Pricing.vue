@@ -38,7 +38,7 @@
 
       <template v-slot:image>
         <img
-          src="../assets/brook.27.jpg"
+          src="../assets/brook-27.jpg"
           class="src"
         />
       </template>
