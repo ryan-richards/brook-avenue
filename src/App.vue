@@ -1,7 +1,4 @@
 <template>
-
-
-
   <Navbar />
 <router-view v-slot="{ Component, route }">
   <transition name="fade" mode="out-in">
@@ -9,11 +6,6 @@
   </transition>
 </router-view>
   <Footer />
-
-
-
-
-  
 </template>
 
 <script>

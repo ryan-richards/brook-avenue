@@ -4,11 +4,11 @@
 
     <Content>
       <template v-slot:title>
-        <div class="title">Wedding or Corporate?</div>
+        <div class="title">Wedding Pricing</div>
       </template>
 
       <template v-slot:subtitle>
-        <div class="subtitle">Choose from over 300 flavours</div>
+        <div class="subtitle"></div>
       </template>
 
       <template v-slot:content>
@@ -65,7 +65,7 @@
             date is confirmed, it's time to pick your flavours!
           </p>
           <p class="pt-1">
-            Use the ranomise button below to explore some of our artisan flavours!
+            Have some fun and use the randomise button below to explore some of our artisan flavours! Or get in touch to get full list of all our current flavour suggestions. 
           </p>
           <div class="buttons">
             <div class="button" @click="randomise">
@@ -104,7 +104,6 @@
             <ul>
               <li>Choice of 4 gelato flavours</li>
               <li>Plain & Luxury waffle cones</li>
-              <li>Branded wafer discs</li>
               <li>'Just Married' gelato tubs</li>
               <li>2hrs of scooping service</li>
               <li>Travel within 20 miles of Belfast</li>

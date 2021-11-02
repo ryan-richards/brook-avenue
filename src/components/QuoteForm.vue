@@ -71,7 +71,7 @@
                 Quote includes travel within 20 miles of Belfast.
               </div>
               <div class="subtitle mt-2">
-                For an exact quote, click below.
+                To register your interest, request a date check and personalised quote click below.
               </div>
             </div>
 
@@ -84,7 +84,7 @@
                   class="button"
                   :disabled="!email"
                 >
-                  Check my date
+                  Submit Request
                 </button>
               </div>
             </div>
