@@ -38,7 +38,7 @@
 
       <template v-slot:image>
         <img
-          src="https://brookavenue.files.wordpress.com/2019/10/64b3aeff-2edb-4777-bd23-16a4f8563500.jpg?w=720"
+          src="../assets/brook.27.jpg"
           class="src"
         />
       </template>
