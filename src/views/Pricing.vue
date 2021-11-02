@@ -104,10 +104,10 @@
             <ul>
               <li>Choice of 4 gelato flavours</li>
               <li>Plain & Luxury waffle cones</li>
-              <li>Branded wafer disks</li>
+              <li>Branded wafer discs</li>
               <li>'Just Married' gelato tubs</li>
               <li>2hrs of scooping service</li>
-              <li>Travel within 10 miles of Belfast</li>
+              <li>Travel within 20 miles of Belfast</li>
             </ul>
             <div>
               <p>Optional Extras:</p>

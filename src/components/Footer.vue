@@ -7,7 +7,7 @@
   
   <div class="column has-text-left">
   <p>Brook Avenue</p>
-  <p>hello@brookavenue.co.uk</p>
+  <p>info@brookavenue.co.uk</p>
   <p>Terms & Conditions © 2021</p>
 
 <div class="block pt-3">
