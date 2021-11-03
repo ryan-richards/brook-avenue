@@ -1,11 +1,15 @@
 <template>
   <div class="wrapper">
-    <div class="container">
-      <div class="columns">
-        <div class="column content has-text-left">
+    <div class="container" style="max-width:60vh;">
+          <div class="center">
+            <div>
           <div class="title">Pricing.</div>
           <div class="subtitle">Enter your details to generate quote.</div>
-          <form name="Quote">
+            </div>
+
+          </div>
+
+          <form name="Quote" class="has-text-left pt-5">
             <div class="field">
               <label class="label">Email</label>
               <div class="control">
@@ -59,13 +63,13 @@
                 <span> I agree to marketing permissons, contact me by email.</span>
             </label>
           </form>
-        </div>
-        <div class="column center has-text-left">
+
+        <div class="pt-6 has-text-left">
           <div class="block">
             <div class="block">
-              <div class="title sans">Estimated Quote</div>
-              <div v-if="guests" class="title sans">£ {{ Math.round(270 + guests * 1.5) }} </div>
-              <div v-else class="title sans">£ 0</div>
+              <div class="title">Estimated Quote</div>
+              <div v-if="guests" class="title">£ {{ Math.round(270 + guests * 1.5) }} </div>
+              <div v-else class="title">£ 0</div>
 
               <div class="subtitle mt-4 mb-0">
                 Quote includes travel within 20 miles of Belfast.
@@ -110,7 +114,6 @@
           </div>
         </div>
       </div>
-    </div>
 </template>
 
 
@@ -196,5 +199,9 @@ export default {
 
 span {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+.label{
+  font-weight:500;
 }
 </style>

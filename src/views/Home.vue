@@ -136,15 +136,11 @@
 </template>
 
 <script>
-import Quote from "../components/Quote.vue";
-import Content from "../components/Content.vue";
 import { useHead } from "@vueuse/head";
 import Test from "../components/Test.vue";
 
 export default {
   components: {
-    Quote,
-    Content,
     Test,
   },
   data() {

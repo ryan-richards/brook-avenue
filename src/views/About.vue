@@ -69,16 +69,12 @@
 </template>
 
 <script>
-import BlockLeft from "../components/BlockLeft.vue";
-import Quote from "../components/Quote.vue";
 import ContentBody from "../components/ContentBody.vue";
 
 import { useHead } from "@vueuse/head";
 
 export default {
   components: {
-    BlockLeft,
-    Quote,
     ContentBody,
   },
   setup() {
