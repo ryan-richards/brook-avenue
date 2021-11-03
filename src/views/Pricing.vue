@@ -135,7 +135,7 @@
 
           <div class="center">
             <div class="has-text-left">
-            <div class="columns">
+            <div class="columns pl-5 ">
               <div class="column">
               <p>As Standard:</p>
                 <ul style="list-style-type: circle" class="pt-3">
