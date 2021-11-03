@@ -135,8 +135,8 @@
 
           <div class="center">
             <div class="has-text-left">
-            <div class="columns is-mobile is-8">
-              <div class="column pr-5">
+            <div class="columns is-mobile pl-4 pr-4">
+              <div class="column">
               <p>As Standard:</p>
                 <ul style="list-style-type: circle" class="pt-3">
                   <li>Choice of 4 gelato flavours</li>
@@ -146,7 +146,7 @@
                   <li>Travel within 20 miles of Belfast</li>
                 </ul>
               </div>
-              <div class="column pl-5">
+              <div class="column">
 <div>
                   <p>Optional Extras:</p>
                   <ul style="list-style-type: circle" class="pt-3">
