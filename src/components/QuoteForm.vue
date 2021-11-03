@@ -82,7 +82,7 @@
             <div class="field is-grouped">
               <div class="control">
                 <button
-                  @click="handleSubmit(), (isActive = !isActive)"
+                  @click="handleSubmit(), (isActive = !isActive), sendData()"
                   title="Enter your email"
                   type="submit"
                   class="button"
@@ -121,6 +121,7 @@
 <script>
 import { ref } from "vue";
 import { supabase } from "../supabase";
+import axios from 'axios';
 
 export default {
   el: "#Quote",
@@ -151,12 +152,20 @@ export default {
         alert(error.error_description || error.message);
       }
     };
+
+    const sendData = async ()=> {
+      axios.post(`https://express-mailer-ryanrichards.vercel.app/api/email_api`,{recipient:email.value,date:date.value,guests:guests.value,venue:venue.value},).then(response => {
+        console.log(response)
+      })
+    }
+
     return {
       email,
       venue,
       guests,
       date,
       handleSubmit,
+      sendData
     };
   },
 };

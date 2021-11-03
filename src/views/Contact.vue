@@ -94,6 +94,7 @@
 import { ref } from "vue"
 import { supabase } from "../supabase"
 import { useHead } from '@vueuse/head';
+import axios from 'axios';
 
 export default {
     setup(){
@@ -124,16 +125,24 @@ export default {
             ])
             if (error) throw error
                sent.value = true
-               name.value = ""
-               email.value = ""
-               venue.value = ""
-               date.value = ""
-               message.value = ""
+               sendData();
              } catch (error) {
                 alert(error.error_description || error.message)
              }
            
         }
+
+
+      const sendData = async ()=> {
+      axios.post(`https://express-mailer-ryanrichards.vercel.app/api/email_api/contact`,{name:name.value,recipient:email.value,date:date.value,message:message.value,venue:venue.value,},).then(response => {
+        console.log(response)
+        name.value = ""
+        email.value = ""
+        venue.value = ""
+        date.value = ""
+        message.value = ""
+      })
+    }
 
         return {
             name,
@@ -142,7 +151,8 @@ export default {
             venue,
             date,
             handleSubmit,
-            sent
+            sent,
+            sendData
         }
 }
 }
