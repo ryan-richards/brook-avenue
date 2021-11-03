@@ -101,6 +101,7 @@
                   <p v-else>{{randomFlavourText.Flavours}}</p>
                 </div>
               </div>
+              <p v-if="randomFlavourText" style="margin-top:-1rem;">keep tapping!</p>
             </div>
           </div>
         </div>
