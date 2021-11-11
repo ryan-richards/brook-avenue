@@ -86,7 +86,8 @@
                   title="Enter your email"
                   type="submit"
                   class="button"
-                  :disabled="!email"
+                  :disabled="!email || disableButton"
+                  v-bind:class="{ isLoading: loading }"
                 >
                   Submit Request
                 </button>
@@ -119,7 +120,7 @@
 
 
 <script>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { supabase } from "../supabase";
 import axios from 'axios';
 
@@ -132,13 +133,25 @@ export default {
     };
   },
   setup() {
+    const disableButton = ref(false)
+    const dataSuccess = ref(false)
+    const emailSuccess = ref(false)
+    const loading = ref(false)
     const email = ref("");
     const venue = ref("");
     const guests = ref("");
     const date = ref("");
 
+  watch([dataSuccess, emailSuccess], (currentValue, oldValue) => {
+      if (dataSuccess && emailSuccess){
+        loading.value = false
+        disableButton.value = true
+      }
+    });
+
     const handleSubmit = async () => {
       try {
+        loading.value= true
         const { data, error } = await supabase.from("new-inquiries").insert([
           {
             recipient: email.value,
@@ -150,13 +163,21 @@ export default {
         if (error) throw error;
       } catch (error) {
         alert(error.error_description || error.message);
+      } finally {
+        dataSuccess.value = true
       }
     };
 
     const sendData = async ()=> {
+      try{
+       loading.value = true
       axios.post(`https://express-mailer-ryanrichards.vercel.app/api/email_api`,{recipient:email.value,date:date.value,guests:guests.value,venue:venue.value},).then(response => {
-        console.log(response)
       })
+      } catch {
+        console.log(response.error)
+      } finally {
+        emailSuccess.value = true
+      } 
     }
 
     return {
@@ -164,6 +185,10 @@ export default {
       venue,
       guests,
       date,
+      loading,
+      dataSuccess,
+      emailSuccess,
+      disableButton,
       handleSubmit,
       sendData
     };

@@ -35,7 +35,7 @@
 
       <div class="center">
         <div class="image pt-6">
-          <img src="../assets/brookBW-1.webp" alt="" style="max-width: 80vh" />
+          <img src="../assets/brook-25.jpg" alt="" style="max-width: 80vh" />
         </div>
       </div>
 
@@ -64,7 +64,7 @@
 
     <div class="center">
         <div class="image pt-4 pb-6">
-          <img src="../assets/brook-cart.webp" alt="" style="max-width: 80vh" />
+          <img src="../assets/brookBW-1.webp" alt="" style="max-width: 80vh" />
         </div>
     </div>
 
@@ -72,18 +72,7 @@
       class="columns is-gapless mb-0"
       style="margin-left: -2rem; margin-right: -2rem"
     >
-      <div class="column mb-0 splitBlocks">
-        <router-link to="/about">
-          <div class="hero halfSplit block1">
-            <div class="hero-body center">
-              <div class="title p-4 has-text-white" style="font-size: 4em">
-                Our Story
-              </div>
-            </div>
-          </div>
-        </router-link>
-      </div>
-      <div class="column mb-0 splitBlocks">
+          <div class="column mb-0 splitBlocks">
         <router-link to="/pricing">
           <div class="block2">
             <div class="hero halfSplit">
@@ -96,9 +85,43 @@
           </div>
         </router-link>
       </div>
+      <div class="column mb-0 splitBlocks">
+        <router-link to="/about">
+          <div class="hero halfSplit block1">
+            <div class="hero-body center">
+              <div class="title p-4 has-text-white" style="font-size: 4em">
+                Our Story
+              </div>
+            </div>
+          </div>
+        </router-link>
+      </div>
+
     </div>
 
+    <div class="center">
+
+   <div id="test" class="test">
+    <div class="test_item">
+      <div>
+            <Test
+      style="margin-bottom: -2rem"
+      subtitle="Brook Avenue added such a special element to our day. The sun was shining and everyone loved getting an Ice-cream. The girls were so friendly, the Icecream was DELICIOUS. Being a covid bride I had many reschedules and Naomi was always so accommodating and lovely. Honestly couldn’t recommend enough to add a special something to your special occasion."
+      person="Carla A."
+    />
+
     <Test
+      style="margin-bottom: -2rem"
+      subtitle="Totally couldn’t recommend Brook Avenue enough! Naomi was so easy to communicate with and the ice cream went down a treat in the heat at our wedding in June! I was so glad we decided to give our guests this surprise as it is a fab idea!! Plus the ice cream was AMAZING!! The cart is so beautiful and totally matched our vibe!! Thanks again for everything!
+Mr and Mrs Sharvin xo"
+      person="Lisa S."
+    />
+      </div>
+
+    </div>
+    <div class="test_item">
+        <div>
+            <Test
       style="margin-bottom: -2rem"
       subtitle="Thank you so much for keeping all of our guests (and my hubby) fuelled with your delicious ice cream !"
       person="@stephorr2021"
@@ -109,6 +132,52 @@
       subtitle="Thank you so much! We were delighted to have you come along to help us celebrate. It was absolutely delicious....I'm very glad I got to try every flavour! Our guests haven't stopped talking about it since!"
       person="@thekatspyjamasni"
     />
+        </div>
+
+    </div>
+    <div class="test_item">
+      <div>
+            <Test
+      style="margin-bottom: -2rem"
+      subtitle="So glad we booked Brook Avenue for our wedding. A last minute addition, we were very lucky that they had availability! We ended up getting married on the hottest day ever recorded in N.I. and our guests were so grateful for an ice cream while sitting out enjoying the sunshine! The flavours were to die for, with white chocolate kinder bueno being the absolute winner 😍 Thank you so, so much for the fantastic service, amazing ice cream and professional communication throughout!"
+      person="Karis B."
+    />
+
+    <Test
+      style="margin-bottom: -2rem"
+      subtitle="100% recommend! This was the nicest touch to our day the guests loved it! The flavours were amazing and the whole set up was perfect! Thank you again so much!"
+      person="Megan G."
+    />
+      </div>
+
+    </div>
+
+    <div class="test_item">
+      <div>
+            <Test
+      style="margin-bottom: -2rem"
+      subtitle="A perfect after wedding ceremony treat! Presented beautifully with fabulous staff! Highly recommend booking Brook Avenue! All of our guests commented on how lovely their ice cream was! I loved the extra touch of “Just Married” on the ice cream tubs l! 💕"
+      person="Sophie McN."
+    />
+
+    <Test
+      style="margin-bottom: -2rem"
+      subtitle="Brook Avenue attended our after wedding BBQ at Rossharbour. They were great!
+The guests absolutely loved the gelato. It was so tasty!! They went over and above and catered to our needs. Couldn't recommend them enough!"
+      person="Lisa H."
+    />
+      </div>
+
+    </div>
+    
+    
+    </div>
+   
+    </div>
+ 
+
+
+
 
     <hr />
 
@@ -278,6 +347,34 @@ a {
   margin-right: -3rem;
 }
 
+
+/* test scoll snapping */
+.test {
+  display: flex;
+  max-width: 450px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding: 0rem;
+  padding: 0rem;
+}
+
+#test::-webkit-scrollbar {
+    display: none;
+}
+
+.test_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 450px;
+  scroll-snap-align: start;
+  font-size: 1.5rem;
+}
+
+
+
 @media (max-width: 1024px) {
   .home {
     background: black url("../assets/brook-13.jpg") center / cover;
@@ -301,5 +398,39 @@ a {
   .halfHome {
     height: 50vh;
   }
+
+
+
+.test {
+  display: flex;
+  max-width: 350px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding: 0rem;
+  padding: 0rem;
 }
+
+#test::-webkit-scrollbar {
+    display: none;
+}
+
+.test_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 350px;
+  scroll-snap-align: start;
+  font-size: 1.5rem;
+}
+
+
+}
+
+
+
+
+
+
 </style>
