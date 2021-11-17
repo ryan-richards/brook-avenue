@@ -49,11 +49,13 @@
               </a>
             </div>
             <div class="column">
+              <a href="https://ratings.food.gov.uk/business/en-GB/1111064/Brooke-Avenue-Belfast-City">
               <img
                 style="max-width: 100px"
                 src="../assets/foodrating.jpg"
                 alt=""
               />
+              </a>
             </div>
           </div>
         </div>
