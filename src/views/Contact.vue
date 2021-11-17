@@ -135,6 +135,7 @@ export default {
 
       const sendData = async ()=> {
       axios.post(`https://express-mailer-ryanrichards.vercel.app/api/email_api/contact`,{name:name.value,recipient:email.value,date:date.value,message:message.value,venue:venue.value,},).then(response => {
+        console.log("success")
         console.log(response)
         name.value = ""
         email.value = ""

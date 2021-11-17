@@ -100,6 +100,13 @@
                   <p v-if="!randomFlavourText">Random Flavour</p>
                   <p v-else>{{randomFlavourText.Flavours}}</p>
                 </div>
+                
+                   <a href="https://yptpiheqktfmeoisgtea.supabase.in/storage/v1/object/sign/avatars/2021 Flavour List Brook Avenue.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzLzIwMjEgRmxhdm91ciBMaXN0IEJyb29rIEF2ZW51ZS5wZGYiLCJpYXQiOjE2MzcxNTUzMTUsImV4cCI6MTk1MjUxNTMxNX0.XpZ1nyd3bjYLTsv6lbi_YWTcLd0tf-YiobCmgrm5lLs" target="_blank">
+                  <div class="button">
+                  <p>Download Full List</p>
+                     </div>
+                  </a>
+             
               </div>
               <p v-if="randomFlavourText" style="margin-top:-1rem;">keep tapping!</p>
             </div>
@@ -151,7 +158,7 @@
 <div>
                   <p>Optional Extras:</p>
                   <ul style="list-style-type: circle" class="pt-3">
-                    <li>Personalised wafer disks</li>
+                    <li>Personalised wafer discs</li>
                     <li>Personalised gelato tubs</li>
                     <li>Cadbury's Flakes</li>
                   </ul>

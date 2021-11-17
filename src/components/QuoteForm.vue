@@ -176,6 +176,7 @@ export default {
       } catch {
         console.log(response.error)
       } finally {
+        console.log("sucess")
         emailSuccess.value = true
       } 
     }

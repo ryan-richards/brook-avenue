@@ -1,5 +1,5 @@
 <template>
-    <div class="hero pb-6" style="max-width:500px;margin-left: auto;
+    <div class="hero pb-6" style="max-width:400px;margin-left: auto;
 margin-right: auto;">
       <div class="hero-body">
         <div class="block" >
@@ -10,7 +10,7 @@ margin-right: auto;">
             <span class="iconify" data-icon="ant-design:star-filled"></span>
             <span class="iconify" data-icon="ant-design:star-filled"></span>
           </div>
-            <div class="subtitle pt-1 has-text-centered">
+            <div class="subtitle pt-1 has-text-centered center">
                  <i>{{ subtitle }}</i>
             </div>
         </div>
