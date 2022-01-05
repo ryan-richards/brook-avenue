@@ -344,7 +344,7 @@ a {
   transform: scale(1.04);
 }
 .home {
-  background: black url("../assets/brook-13.jpg") center / cover;
+  background: black url("../assets/brook-hero-1-min.jpg") center / cover;
   margin-left: -3rem;
   margin-right: -3rem;
 }
@@ -372,14 +372,14 @@ a {
 }
 @media (max-width: 1024px) {
   .home {
-    background: black url("../assets/brook-13.jpg") center / cover;
+    background: black url("../assets/brook-hero-1-min.jpg") center / cover;
     margin-left: -3rem;
     margin-right: -3rem;
   }
 }
 @media (max-width: 768px) {
   .home {
-    background: black url("../assets/brook-13.jpg") center / cover;
+    background: black url("../assets/brook-hero-1-min.jpg") center / cover;
     margin-left: -3rem;
     margin-right: -3rem;
   }
