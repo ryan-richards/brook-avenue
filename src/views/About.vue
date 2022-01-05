@@ -77,7 +77,7 @@
         <router-link :to="`/post/13`">
           <div class="hero halfSplit block1">
             <div class="hero-body center">
-              <div class="title p-4 has-text-white" style="font-size: 4em">
+              <div class="title p-4 has-text-white" style="font-size: 2.5em;">
                 10 Reasons to hire an ice cream cart for your Wedding!
               </div>
             </div>
@@ -136,7 +136,7 @@ export default {
 .halfSplit {
   overflow: hidden;
   height: 50vh;
-  padding:2%;
+  padding:10%;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.288);
 }
 .square {
