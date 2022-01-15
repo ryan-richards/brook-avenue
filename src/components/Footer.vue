@@ -4,7 +4,7 @@
       <div class="columns">
         <div class="column has-text-left">
           <p>Brook Avenue</p>
-          <p>info@brookavenue.co.uk</p>
+          <p>brookavenuegelato@gmail.com</p>
           <a
             href="https://yptpiheqktfmeoisgtea.supabase.in/storage/v1/object/sign/avatars/Brook Avenue Booking T&Cs 2021 11.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL0Jyb29rIEF2ZW51ZSBCb29raW5nIFQmQ3MgMjAyMSAxMS5wZGYiLCJpYXQiOjE2MzcxNTUwNzEsImV4cCI6MTk1MjUxNTA3MX0.jjdrbt6ln3u5TT6spvuKs6ILu9RzLrZxE2ifEtXGaec"
           >

@@ -32,20 +32,17 @@
           <div class="center">
             <div class="has-text-left" style="max-width: 60vh">
               <p>
-                Welcome to Brook Avenue. We're here to add a unique touch of
-                gelato magic to your special day as a treat for you and your
-                guests.
+Brook Avenue aims to bring bespoke homemade gelato into the hands of our wonderful couples and your guests. 
+
               </p>
               <p>
-                Looking for a way to make your event unique, special and super
-                tasty? There's no better way to celebrate your special day than
-                to offer your guests the best bespoke gelato in Northern
-                Ireland.
+We make gelato classics from our milk and cream base but we also love to make non-dairy and vegan options so everyone can enjoy gelato on your big day.
               </p>
               <p>
-                We have an endless list of flavours...Why? Well because we make
-                our own gelato we can pretty much make any flavour you'd like,
-                so don't be shy, just ask!
+Our handcrafted cart situates itself perfectly into the wedding day whether it be right after your ceremony, during the welcome reception or even as a surprise in the evening.
+              </p>
+              <p>
+                You can generate an estimated quote below.
               </p>
               <div class="pt-5">
                 <router-link class="button" to="/pricing#quoteform"
@@ -86,14 +83,21 @@
           <div class="center">
             <div class="has-text-left" style="max-width: 60vh">
               <p>
-                Booking one of our three gelato carts couldnt be easier. Once
-                your date is confirmed, it's time to pick your flavours!
+We have been passionate about making great gelato for several years now and naturally we've ended up with a rather large list of flavour options including many non-dairy and vegan flavours.
               </p>
               <p class="pt-1">
-                Have some fun and use the randomise button below to explore some
-                of our artisan flavours! Or get in touch to get full list of all
-                our current flavour suggestions.
+One of the best parts of booking with us is that the choice of flavours is up to you and they are completely unique to your day as we make it fresh for each event.
               </p>
+              <p class="pt-1">
+Our handcrafted cart can hold up to four different flavours, you can either choose from our catalogue or we can craft a custom flavour.
+              </p>
+<p class="pt-1">
+Your combination can be made up of fan favourites, or you can choose something you've never tried before as a surprise on the day.
+              </p>
+              <p class="pt-1">
+Have some fun and use the randomise button below to explore some of our artisan flavours!
+              </p>
+
 
               <div class="buttons pt-5">
                 <div class="button" @click="randomFlavour">
@@ -151,7 +155,8 @@
                   <li>Plain & Luxury waffle cones</li>
                   <li>'Just Married' gelato tubs</li>
                   <li>2hrs of scooping service</li>
-                  <li>Travel within 20 miles of Belfast</li>
+                  <li>Member of staff</li>
+                  <li>Travel within 20 miles of Belfast (A small travel fee will apply beyond 20 miles of belfast - submit a request below for exact quote)</li>
                 </ul>
               </div>
               <div class="column">
