@@ -125,7 +125,7 @@ export default {
             ])
             if (error) throw error
                sent.value = true
-               //sendData();
+               sendData();
              } catch (error) {
                 alert(error.error_description || error.message)
              }

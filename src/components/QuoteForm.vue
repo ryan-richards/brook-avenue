@@ -82,7 +82,7 @@
             <div class="field is-grouped">
               <div class="control">
                 <button
-                  @click="handleSubmit(), (isActive = !isActive)"
+                  @click="handleSubmit(), sendData(), (isActive = !isActive)"
                   title="Enter your email"
                   type="submit"
                   class="button"
