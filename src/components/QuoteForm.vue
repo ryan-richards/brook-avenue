@@ -11,6 +11,18 @@
 
           <form name="Quote" class="has-text-left pt-5">
             <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input
+                  class="input"
+                  name="name"
+                  type="text"
+                  placeholder="Name"
+                  v-model="name"
+                />
+              </div>
+            </div>
+            <div class="field">
               <label class="label">Email</label>
               <div class="control">
                 <input
@@ -137,6 +149,7 @@ export default {
     const dataSuccess = ref(false)
     const emailSuccess = ref(false)
     const loading = ref(false)
+    const name = ref("");
     const email = ref("");
     const venue = ref("");
     const guests = ref("");
@@ -158,6 +171,7 @@ export default {
             venue: venue.value,
             guests: guests.value,
             date: date.value,
+            name: name.value,
           },
         ]);
         if (error) throw error;
@@ -168,7 +182,7 @@ export default {
       }
     };
 
-    const sendData = async ()=> {
+    /*const sendData22 = async ()=> {
       try{
        loading.value = true
       axios.post(`https://express-mailer-ryanrichards.vercel.app/api/email_api`,{recipient:email.value,date:date.value,guests:guests.value,venue:venue.value},).then(response => {
@@ -179,9 +193,25 @@ export default {
         console.log("sucess")
         emailSuccess.value = true
       } 
+    }*/
+
+    const sendData = async ()=> {
+      try{
+       loading.value = true
+      axios.post(`https://hnadufb4a9.execute-api.eu-west-1.amazonaws.com/api/email_api?`,{recipient:email.value,date:date.value,guests:guests.value,venue:venue.value,name:name.value},).then(response => {
+      })
+      } catch {
+        console.log(response.error)
+      } finally {
+        console.log("sucess")
+        emailSuccess.value = true
+      } 
     }
 
+    
+
     return {
+      name,
       email,
       venue,
       guests,
