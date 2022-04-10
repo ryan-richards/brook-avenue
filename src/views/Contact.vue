@@ -72,7 +72,7 @@
 
               <div class="field is-grouped">
                 <div class="control">
-                  <button type="submit" class="button">Submit</button>
+                  <button type="submit" class="button" :disabled="!email || disableButton">Submit</button>
                 </div>
               </div>
             </form>
@@ -91,7 +91,7 @@
 <script>
 
 
-import { ref } from "vue"
+import { ref, watch } from "vue"
 import { supabase } from "../supabase"
 import { useHead } from '@vueuse/head';
 import axios from 'axios';
@@ -99,13 +99,18 @@ import axios from 'axios';
 export default {
     setup(){
         console.log("loaded setup")
-
+        
         const email = ref("")
         const venue = ref("")
         const date = ref("")
         const name = ref("")
         const message = ref("")
         const sent = ref(false)
+
+    const disableButton = ref(false)
+    const dataSuccess = ref(false)
+    const emailSuccess = ref(false)
+    const loading = ref(false)
 
         useHead({
       title: 'Contact',
@@ -116,8 +121,15 @@ export default {
       ]
       })
 
+    watch([dataSuccess, emailSuccess], (currentValue, oldValue) => {
+      if (dataSuccess && emailSuccess){
+        loading.value = false
+        disableButton.value = true
+      }
+    });
+
         const handleSubmit = async () => {
-            try {   
+            try {
             const  { data, error } = await supabase
             .from("contact")
             .insert([
@@ -134,18 +146,32 @@ export default {
 
 
       const sendData = async ()=> {
-      axios.post(`https://express-mailer-ryanrichards.vercel.app/api/email_api/contact`,{name:name.value,recipient:email.value,date:date.value,message:message.value,venue:venue.value,},).then(response => {
-        console.log("success")
-        console.log(response)
+        try {
+        loading.value = true
+        axios.post(`https://hnadufb4a9.execute-api.eu-west-1.amazonaws.com/api/email_api/contact?`,{name:name.value,recipient:email.value,date:date.value,message:message.value,venue:venue.value,},).then(response => {
+        //console.log("success")
+        //console.log(response)
         name.value = ""
         email.value = ""
         venue.value = ""
         date.value = ""
         message.value = ""
       })
+
+      } catch {
+        console.log('some error occured')
+      } finally {
+        console.log("sucess")
+        emailSuccess.value = true
+      } 
+      
     }
 
         return {
+            loading,
+            disableButton,
+            dataSuccess,
+            emailSuccess,
             name,
             message,
             email,
