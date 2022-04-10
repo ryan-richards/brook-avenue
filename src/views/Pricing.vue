@@ -207,11 +207,11 @@ export default {
     let randomNumber = 0;
     const randomFlavourText = ref("");
     useHead({
-      title: "Pricing",
+      title: "Pricing - Brook Avenue Gelato Cart Hire Belfast",
       meta: [
         {
           title: "description",
-          content: "Pricing information page",
+          content: "Get pricing details for homemade gelato and ice cream cart hire in Belfast, Northern Ireland.",
         },
       ],
     });

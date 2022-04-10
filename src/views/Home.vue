@@ -41,7 +41,7 @@
 
       <div class="center">
         <div class="image pt-6">
-          <img src="../assets/brook-25.jpg" alt="" style="max-width: 80vh" />
+          <img src="../assets/brook-25.jpg" alt="Gelato Cart Galgorm Northern Ireland" style="max-width: 80vh" />
         </div>
       </div>
 
@@ -79,7 +79,7 @@
 
     <div class="center">
       <div class="image pt-4 pb-6">
-        <img src="../assets/brookBW-1.webp" alt="" style="max-width: 80vh" />
+        <img src="../assets/brookBW-1.webp" alt="Homemade gelato in personalised tub." style="max-width: 80vh" />
       </div>
     </div>
 
@@ -245,12 +245,12 @@ export default {
   },
   setup() {
     useHead({
-      title: "Home",
+      title: "Brook Avenue Gelato Cart Hire Belfast",
       meta: [
         {
           name: "description",
           content:
-            "Brook Avenue homemade gelato ice cream cart, for hire across Northern Ireland.",
+            "Brook Avenue homemade gelato ice cream cart for weddings, available for hire across Northern Ireland.",
         },
       ],
     });

@@ -112,11 +112,11 @@ export default {
   },
   setup() {
     useHead({
-      title: "About",
+      title: "About - Brook Avenue Gelato Belfast",
       meta: [
         {
           name: "description",
-          content: "About brook avenue gelato",
+          content: "Brook Avenue Gelato is a wedding ice cream cart family run business. Providing homemade gelato flavours to wedding guests across Northern Ireland.",
         },
       ],
     });

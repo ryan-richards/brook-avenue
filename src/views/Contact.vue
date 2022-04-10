@@ -113,10 +113,10 @@ export default {
     const loading = ref(false)
 
         useHead({
-      title: 'Contact',
+      title: 'Contact - Brook Avenue Gelato Cart Hire Belfast',
       meta:[{
         title: 'description',
-        content: 'Contact Brook Avenue Gelato'
+        content: 'Contact Brook Avenue Gelato, for more details or if you are interested in booking a gelato cart for your wedding day!'
         }
       ]
       })
