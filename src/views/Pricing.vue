@@ -9,7 +9,7 @@
             <div class="image">
               <img
                 src="../assets/brook-27.jpg"
-                alt=""
+                alt="Ice cream/Gelato Bicycle Cart at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral wedding basket and cart setup infront of Phantom house at Galgorm wedding venue."
                 style="max-width: 80vh"
               />
             </div>
@@ -62,7 +62,7 @@ Our handcrafted cart situates itself perfectly into the wedding day whether it b
             <div class="image">
               <img
                 src="../assets/brook-23-crop.jpg"
-                alt=""
+                alt="Gelato flavours being written onto a custom chalkboard for a wedding at Galgorm Resort and Spa, Ballymena, Northern Ireland."
                 style="max-width: 80vh"
               />
             </div>
@@ -126,7 +126,7 @@ Have some fun and use the randomise button below to explore some of our artisan 
             <div class="image">
               <img
                 src="../assets/brook-43.jpg"
-                alt=""
+                alt="Close up photo of a gelato tub with a personalised wafer disc reading bride and grooms names. Sitting on Brook Avenue's custom made quirky gelato cart. Ivy and Rose garland visible beneath, attached to the cart."
                 style="max-width: 80vh"
               />
             </div>
@@ -211,7 +211,7 @@ export default {
       meta: [
         {
           title: "description",
-          content: "Get pricing details for homemade gelato and ice cream cart hire in Belfast, Northern Ireland.",
+          content: "Get pricing details for homemade gelato and ice cream cart hire in Belfast, Northern Ireland for your Wedding or Corporate/Private Event. ",
         },
       ],
     });

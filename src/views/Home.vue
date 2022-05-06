@@ -41,7 +41,7 @@
 
       <div class="center">
         <div class="image pt-6">
-          <img src="../assets/brook-25.jpg" alt="Gelato Cart Galgorm Northern Ireland" style="max-width: 80vh" />
+          <img src="../assets/brook-25.jpg" alt="Ice cream/Gelato Bicycle Cart at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral wedding basket and cart setup infront of Phantom house at Galgorm wedding venue." style="max-width: 80vh" />
         </div>
       </div>
 
@@ -79,7 +79,7 @@
 
     <div class="center">
       <div class="image pt-4 pb-6">
-        <img src="../assets/brookBW-1.webp" alt="Homemade gelato in personalised tub." style="max-width: 80vh" />
+        <img src="../assets/brookBW-1.webp" alt="Black and Whire photo of homemade gelato in a personalised tub with personalised wafer at Galgorm Resort and Spa wedding venue." style="max-width: 80vh" />
       </div>
     </div>
 
@@ -211,13 +211,13 @@ The guests absolutely loved the gelato. It was so tasty!! They went over and abo
       <a href="https://www.instagram.com/brookavenue/">@brookavenue</a>
       <div class="columns pl-3 pr-3 pt-4 is-mobile">
         <div class="column">
-          <img class="square" src="../assets/insta-1-min.jpeg" alt="" />
+          <img class="square" src="../assets/insta-1-min.jpeg" alt="Instagram photo of ice cream tub with just married stamp setup at Castle Leslie Northern Ireland, County Monaghan, Bride and Groom looking at each other in background." />
         </div>
         <div class="column">
-          <img class="square" src="../assets/insta-2-min.jpeg" alt="" />
+          <img class="square" src="../assets/insta-2-min.jpeg" alt="Instagram photo at Castle Leslie Northern Ireland, County Monaghan. White ice cream cart, with ivy and rose garland setup with mint green bike and floral wedding flowers and custom flavour ice cream chalkboard." />
         </div>
         <div class="column">
-          <img class="square" src="../assets/insta-3-min.jpeg" alt="" />
+          <img class="square" src="../assets/insta-3-min.jpeg" alt="Instagram photo of ice cream tub at Riverdale Barn, Moira wedding venue Northern Ireland." />
         </div>
       </div>
     </div>
@@ -245,12 +245,12 @@ export default {
   },
   setup() {
     useHead({
-      title: "Brook Avenue Gelato Cart Hire Belfast",
+      title: "Brook Avenue Gelato Cart Hire Belfast Northern Ireland.",
       meta: [
         {
           name: "description",
           content:
-            "Brook Avenue homemade gelato ice cream cart for weddings, available for hire across Northern Ireland.",
+            "Brook Avenue homemade gelato ice cream cart for weddings, available for hire across Northern Ireland. Based in Belfast, we make artisan gelato ice cream fresh for every wedding or coroprate/private events. Our Quirky custom build ice cream cart is a fantastic alternative to hiring an ice cream van.",
         },
       ],
     });
