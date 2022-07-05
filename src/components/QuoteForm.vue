@@ -80,7 +80,7 @@
           <div class="block">
             <div class="block">
               <div class="title">Estimated Quote</div>
-              <div v-if="guests" class="title">£ {{guests >= 71 ? Math.round(360 + guests * 1) : 390 }}</div>
+              <div v-if="guests" class="title">£ {{Math.round(360 + guests * 1)}}</div>
               <div v-else class="title">£ 0</div>
               <div class="subtitle mt-4 mb-0">
                 Quote includes travel within 20 miles of Belfast.
