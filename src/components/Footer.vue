@@ -6,9 +6,9 @@
           <p>Brook Avenue</p>
           <p>info@brookavenue.co.uk</p>
           <a
-            href="https://yptpiheqktfmeoisgtea.supabase.in/storage/v1/object/sign/avatars/Brook Avenue Booking T&Cs 2021 11.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL0Jyb29rIEF2ZW51ZSBCb29raW5nIFQmQ3MgMjAyMSAxMS5wZGYiLCJpYXQiOjE2MzcxNTUwNzEsImV4cCI6MTk1MjUxNTA3MX0.jjdrbt6ln3u5TT6spvuKs6ILu9RzLrZxE2ifEtXGaec"
+            href="https://yptpiheqktfmeoisgtea.supabase.co/storage/v1/object/sign/avatars/Brook%20Avenue%20Booking%20T&Cs%202023.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL0Jyb29rIEF2ZW51ZSBCb29raW5nIFQmQ3MgMjAyMy5wZGYiLCJpYXQiOjE2ODY4NTE2ODAsImV4cCI6MTcxODM4NzY4MH0.5fF41EJtSKR5NVpbPd2_04du964Z0weZrzSsjncah2A&t=2023-06-15T17%3A54%3A40.831Z"
           >
-            <p>Terms & Conditions © 2021</p>
+            <p>Terms & Conditions © 2023</p>
           </a>
           <div class="block pt-3">
             <a href="https://www.facebook.com/brookavenuegelato">
