@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Banner />
     <div class="hero halfHome home"></div>
 
     <div class="pt-4"></div>
@@ -254,10 +255,12 @@ The guests absolutely loved the gelato. It was so tasty!! They went over and abo
 <script>
 import { useHead } from "@vueuse/head";
 import Test from "../components/Test.vue";
+import Banner from "../components/Banner.vue";
 
 export default {
   components: {
     Test,
+    Banner,
   },
   data() {
     return {

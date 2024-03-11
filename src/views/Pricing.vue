@@ -1,7 +1,5 @@
 <template>
   <div class="navMargin">
-    <div class="pt-6"></div>
-
     <ContentBody>
       <template v-slot:content>
         <div class="block pt-5 pb-5">

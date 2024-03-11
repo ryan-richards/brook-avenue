@@ -1,5 +1,4 @@
 <template>
-  <Banner />
   <Navbar />
   <router-view v-slot="{ Component, route }">
     <transition name="fade" mode="out-in">
@@ -12,13 +11,11 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
-import Banner from "./components/Banner.vue";
 
 export default {
   components: {
     Navbar,
     Footer,
-    Banner,
   },
 };
 </script>
