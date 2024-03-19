@@ -36,7 +36,19 @@
               ></span>
             </router-link>
           </div>
-          <div class="columns is-mobile" style="max-width: 200px">
+          <div
+            class="columns is-mobile aligned-center"
+            style="max-width: 200px"
+          >
+            <div class="column">
+              <a href="https://weddinghelpni.com">
+                <img
+                  style="max-width: 90px"
+                  src="../assets/approved-supplier.png"
+                  alt=""
+                />
+              </a>
+            </div>
             <div class="column">
               <a
                 href="https://yptpiheqktfmeoisgtea.supabase.in/storage/v1/object/sign/avatars/Were_Good_To_Go_certificate_V3_English_editable.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL1dlcmVfR29vZF9Ub19Hb19jZXJ0aWZpY2F0ZV9WM19FbmdsaXNoX2VkaXRhYmxlLnBkZiIsImlhdCI6MTYzNzE1NTExOSwiZXhwIjoxOTUyNTE1MTE5fQ.3LAJspYrz5B8pxnpo0AEyrRFg9KaEjGDW4soMn8WwDg"
@@ -48,7 +60,7 @@
                 />
               </a>
             </div>
-            <div class="column">
+            <div class="column centered">
               <a
                 href="https://ratings.food.gov.uk/business/en-GB/1111064/Brooke-Avenue-Belfast-City"
               >

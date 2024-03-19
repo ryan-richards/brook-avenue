@@ -43,7 +43,7 @@
       <div class="center">
         <div class="image pt-6 mobileImage">
           <img
-            src="../assets/brook-25.jpg"
+            src="../assets/brook-cart-wide.jpg"
             alt="Ice cream/Gelato Bicycle Cart
           at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral
           wedding basket and cart setup infront of Phantom house at Galgorm
