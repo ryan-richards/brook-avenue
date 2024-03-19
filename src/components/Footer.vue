@@ -8,7 +8,7 @@
           <a
             href="https://yptpiheqktfmeoisgtea.supabase.co/storage/v1/object/sign/avatars/Brook%20Avenue%20Booking%20T&Cs%202023.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL0Jyb29rIEF2ZW51ZSBCb29raW5nIFQmQ3MgMjAyMy5wZGYiLCJpYXQiOjE2ODY4NTE2ODAsImV4cCI6MTcxODM4NzY4MH0.5fF41EJtSKR5NVpbPd2_04du964Z0weZrzSsjncah2A&t=2023-06-15T17%3A54%3A40.831Z"
           >
-            <p>Terms & Conditions © 2023</p>
+            <p>Terms & Conditions © 2024</p>
           </a>
           <div class="block pt-3">
             <a href="https://www.facebook.com/brookavenuegelato">
@@ -49,12 +49,14 @@
               </a>
             </div>
             <div class="column">
-              <a href="https://ratings.food.gov.uk/business/en-GB/1111064/Brooke-Avenue-Belfast-City">
-              <img
-                style="max-width: 100px"
-                src="../assets/foodrating.jpg"
-                alt=""
-              />
+              <a
+                href="https://ratings.food.gov.uk/business/en-GB/1111064/Brooke-Avenue-Belfast-City"
+              >
+                <img
+                  style="max-width: 100px"
+                  src="../assets/foodrating.jpg"
+                  alt=""
+                />
               </a>
             </div>
           </div>
@@ -85,8 +87,7 @@
   </footer>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style scoped>
 .footer {

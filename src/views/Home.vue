@@ -92,7 +92,7 @@
     <div class="center">
       <div class="image pt-4 pb-6 mobileImage">
         <img
-          src="../assets/brookBW-1.webp"
+          src="../assets/brookBW-1.jpg"
           alt="Black and Whire photo of homemade gelato in a personalised tub with personalised wafer at Galgorm Resort and Spa wedding venue."
           style="max-width: 80vh"
         />
@@ -386,7 +386,7 @@ a {
 }
 
 .block1 {
-  background: black url("../assets/brook-9.webp") center / cover;
+  background: black url("../assets/brook-9.jpg") center / cover;
   margin-left: -3rem;
   margin-right: -3rem;
   background-position: center;

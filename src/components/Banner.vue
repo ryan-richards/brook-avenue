@@ -1,5 +1,5 @@
 <template>
-  <div class="container mb-2">
+  <div class="mt-1">
     <div class="cue-container">
       <div v-if="isActive" @click="link" class="sticker yellow">
         <div class="outer-circle"></div>
