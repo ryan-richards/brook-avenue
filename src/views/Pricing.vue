@@ -7,6 +7,7 @@
             <div class="image mobileImage">
               <img
                 src="../assets/brook-27.jpg"
+                class="image-crop"
                 alt="Ice cream/Gelato Bicycle Cart at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral wedding basket and cart setup infront of Phantom house at Galgorm wedding venue."
                 style="max-width: 80vh"
               />
@@ -137,7 +138,7 @@
           <div class="center">
             <div class="image mobileImage">
               <img
-                src="../assets/brook-43.jpg"
+                src="../assets/brook-44.jpg"
                 alt="Close up photo of a gelato tub with a personalised wafer disc reading bride and grooms names. Sitting on Brook Avenue's custom made quirky gelato cart. Ivy and Rose garland visible beneath, attached to the cart."
                 style="max-width: 80vh"
               />
@@ -271,6 +272,11 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: transparent;
+}
+
+.image-crop {
+  aspect-ratio: 3/2;
+  object-fit: cover;
 }
 
 .box {
