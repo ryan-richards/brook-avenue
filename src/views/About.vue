@@ -6,11 +6,13 @@
           <div class="block pt-5">
             <div class="center">
               <div class="image mobileImage">
-                <img
-                  src="../assets/brook-52.webp"
-                  alt="Ice cream/Gelato Bicycle Cart at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral wedding basket and cart setup infront of Galgorm waterfall at Galgorm wedding venue."
-                  style="max-width: 80vh"
-                />
+                <a href="https://emma-rock.com">
+                  <img
+                    src="../assets/brook-9.jpg"
+                    alt="Ice cream/Gelato Bicycle Cart at Galgorm Ballymena Northern Ireland. Green bicycle with floral wedding basket and cart setup infront of Galgorm waterfall at Galgorm wedding venue."
+                    style="max-width: 80vh"
+                  />
+                </a>
               </div>
             </div>
 
@@ -29,7 +31,7 @@
                   Our story began in 2016 when we got our first taste of making
                   our own gelato. After years of experimenting and perfecting
                   our recipes we decided to create Brook Avenue as a portable
-                  gelato cart catering for weddings and events.
+                  gelato cart catering for weddings and events
                 </p>
 
                 <p class="pt-2">

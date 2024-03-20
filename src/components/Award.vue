@@ -5,15 +5,9 @@
   >
     <div class="hero-body">
       <div class="block">
-        <div class="block">
-          <span class="iconify" data-icon="ant-design:star-filled"></span>
-          <span class="iconify" data-icon="ant-design:star-filled"></span>
-          <span class="iconify" data-icon="ant-design:star-filled"></span>
-          <span class="iconify" data-icon="ant-design:star-filled"></span>
-          <span class="iconify" data-icon="ant-design:star-filled"></span>
-        </div>
+        <img :src="img" alt="" />
         <div class="subtitle pt-1 has-text-centered center">
-          <i>{{ subtitle }}</i>
+          <i>{{ text }}</i>
         </div>
       </div>
     </div>
@@ -23,13 +17,13 @@
 
 <script>
 export default {
-  props: ["subtitle", "person"],
+  props: ["img", "person", "text"],
 };
 </script>
 
 <style scoped>
 .line {
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
 }
 
 .button {

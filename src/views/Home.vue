@@ -42,14 +42,16 @@
 
       <div class="center">
         <div class="image pt-6 mobileImage">
-          <img
-            src="../assets/brook-cart-wide.jpg"
-            alt="Ice cream/Gelato Bicycle Cart
-          at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral
-          wedding basket and cart setup infront of Phantom house at Galgorm
-          wedding venue."
-            style="max-width: 80vh"
-          />
+          <a href="https://www.agamarsh.co.uk" target="_blank">
+            <img
+              src="../assets/brook-cart-wide.jpg"
+              alt="Ice cream/Gelato Bicycle Cart
+            at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral
+            wedding basket and cart setup infront of Phantom house at Galgorm
+            wedding venue."
+              style="max-width: 80vh"
+            />
+          </a>
         </div>
       </div>
 
@@ -90,13 +92,23 @@
     </div>
 
     <div class="center">
-      <div class="image pt-4 pb-6 mobileImage">
-        <img
-          src="../assets/brookBW-1.jpg"
-          alt="Black and Whire photo of homemade gelato in a personalised tub with personalised wafer at Galgorm Resort and Spa wedding venue."
-          style="max-width: 80vh"
-        />
+      <div class="image pt-4 pb-4 mobileImage">
+        <a href="https://www.sheenatphotography.com" target="_blank">
+          <img
+            src="../assets/brookBW-1.jpg"
+            alt="Black and Whire photo of homemade gelato in a personalised tub with personalised wafer at Galgorm Resort and Spa wedding venue."
+            style="max-width: 80vh"
+          />
+        </a>
       </div>
+    </div>
+
+    <div class="center mb-6">
+      <Award
+        img="https://creativeoceanicblog.wordpress.com/wp-content/uploads/2024/01/8th-niwa-24.jpg?w=833"
+        text="Outstanding Wedding Supplier of the Year"
+        person="Northern Ireland Wedding Awards"
+      />
     </div>
 
     <div
@@ -256,9 +268,11 @@ The guests absolutely loved the gelato. It was so tasty!! They went over and abo
 import { useHead } from "@vueuse/head";
 import Test from "../components/Test.vue";
 import Banner from "../components/Banner.vue";
+import Award from "../components/Award.vue";
 
 export default {
   components: {
+    Award,
     Test,
     Banner,
   },
