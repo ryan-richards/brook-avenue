@@ -95,7 +95,7 @@
           <div class="field is-grouped">
             <div class="control">
               <button
-                @click="handleSubmit(), sendData(), (isActive = !isActive)"
+                @click="handleSubmit(), (isActive = !isActive)"
                 title="Enter your email"
                 type="submit"
                 class="button"
@@ -138,8 +138,6 @@
 
 <script>
 import { ref, watch } from "vue";
-import { supabase } from "../supabase";
-import axios from "axios";
 import { track } from "@logsnag/vue";
 
 export default {
@@ -171,21 +169,10 @@ export default {
     const handleSubmit = async () => {
       try {
         loading.value = true;
-        const { data, error } = await supabase.from("new-inquiries").insert([
-          {
-            recipient: email.value,
-            venue: venue.value,
-            guests: guests.value,
-            date: date.value,
-            name: name.value,
-          },
-        ]);
-        if (error) throw error;
-      } catch (error) {
-        alert(error.error_description || error.message);
-      } finally {
         dataSuccess.value = true;
         sendLogSnagEvent();
+      } catch (error) {
+        alert(error.error_description || error.message);
       }
     };
 
@@ -213,29 +200,6 @@ export default {
       });
     };
 
-    const sendData = async () => {
-      try {
-        loading.value = true;
-        axios
-          .post(
-            `https://hnadufb4a9.execute-api.eu-west-1.amazonaws.com/api/email_api?`,
-            {
-              recipient: email.value,
-              date: date.value,
-              guests: guests.value,
-              venue: venue.value,
-              name: name.value,
-            }
-          )
-          .then((response) => {});
-      } catch {
-        console.log(response.error);
-      } finally {
-        console.log("sucess");
-        emailSuccess.value = true;
-      }
-    };
-
     return {
       name,
       email,
@@ -247,7 +211,6 @@ export default {
       emailSuccess,
       disableButton,
       handleSubmit,
-      sendData,
       sendLogSnagEvent,
     };
   },

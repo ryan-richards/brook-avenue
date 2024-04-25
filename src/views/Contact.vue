@@ -72,7 +72,13 @@
 
               <div class="field is-grouped">
                 <div class="control">
-                  <button type="submit" class="button" :disabled="!email || disableButton">Submit</button>
+                  <button
+                    type="submit"
+                    class="button"
+                    :disabled="!email || disableButton"
+                  >
+                    Submit
+                  </button>
                 </div>
               </div>
             </form>
@@ -87,100 +93,88 @@
   </div>
 </template>
 
-
 <script>
-
-
-import { ref, watch } from "vue"
-import { supabase } from "../supabase"
-import { useHead } from '@vueuse/head';
-import axios from 'axios';
+import { ref, watch } from "vue";
+import { track } from "@logsnag/vue";
+import { useHead } from "@vueuse/head";
 
 export default {
-    setup(){
-        console.log("loaded setup")
-        
-        const email = ref("")
-        const venue = ref("")
-        const date = ref("")
-        const name = ref("")
-        const message = ref("")
-        const sent = ref(false)
+  setup() {
+    console.log("loaded setup");
 
-    const disableButton = ref(false)
-    const dataSuccess = ref(false)
-    const emailSuccess = ref(false)
-    const loading = ref(false)
+    const email = ref("");
+    const venue = ref("");
+    const date = ref("");
+    const name = ref("");
+    const message = ref("");
+    const sent = ref(false);
 
-        useHead({
-      title: 'Contact - Brook Avenue Gelato Cart Hire Belfast',
-      meta:[{
-        title: 'description',
-        content: 'Contact Brook Avenue Gelato, for more details or if you are interested in booking a gelato cart for your wedding day!'
-        }
-      ]
-      })
+    const disableButton = ref(false);
+    const dataSuccess = ref(false);
+    const emailSuccess = ref(false);
+    const loading = ref(false);
+
+    useHead({
+      title: "Contact - Brook Avenue Gelato Cart Hire Belfast",
+      meta: [
+        {
+          title: "description",
+          content:
+            "Contact Brook Avenue Gelato, for more details or if you are interested in booking a gelato cart for your wedding day!",
+        },
+      ],
+    });
 
     watch([dataSuccess, emailSuccess], (currentValue, oldValue) => {
-      if (dataSuccess && emailSuccess){
-        loading.value = false
-        disableButton.value = true
+      if (dataSuccess && emailSuccess) {
+        loading.value = false;
+        disableButton.value = true;
       }
     });
 
-        const handleSubmit = async () => {
-            try {
-            const  { data, error } = await supabase
-            .from("contact")
-            .insert([
-            { recipient: email.value , venue: venue.value , date: date.value , name:name.value, message:message.value},
-            ])
-            if (error) throw error
-               sent.value = true
-               sendData();
-             } catch (error) {
-                alert(error.error_description || error.message)
-             }
-           
-        }
+    const handleSubmit = async () => {
+      sent.value = true;
+      sendLogSnagEvent();
+    };
 
+    const sendLogSnagEvent = async () => {
+      track({
+        channel: "contact",
+        event: `Contact Request - ${name.value}`,
+        icon: "📧",
+        notify: true,
+        description: `Contact requested by ${name.value} at ${venue.value} on ${date.value} - ${email.value} - message : ${message.value}`,
+        tags: {},
+      });
+      track({
+        channel: "backup",
+        event: `Contact Request - ${name.value}`,
+        icon: "📧",
+        notify: false,
+        description: `Contact requested by ${name.value} at ${venue.value} on ${date.value} - ${email.value} - message : ${message.value}`,
+        tags: {
+          recipient: email.value,
+          venue: venue.value,
+          date: date.value,
+          type: "contact",
+        },
+      });
+      disableButton.value = true;
+    };
 
-      const sendData = async ()=> {
-        try {
-        loading.value = true
-        axios.post(`https://hnadufb4a9.execute-api.eu-west-1.amazonaws.com/api/email_api/contact?`,{name:name.value,recipient:email.value,date:date.value,message:message.value,venue:venue.value,},).then(response => {
-        //console.log("success")
-        //console.log(response)
-        name.value = ""
-        email.value = ""
-        venue.value = ""
-        date.value = ""
-        message.value = ""
-      })
-
-      } catch {
-        console.log('some error occured')
-      } finally {
-        console.log("sucess")
-        emailSuccess.value = true
-      } 
-      
-    }
-
-        return {
-            loading,
-            disableButton,
-            dataSuccess,
-            emailSuccess,
-            name,
-            message,
-            email,
-            venue,
-            date,
-            handleSubmit,
-            sent,
-            sendData
-        }
-}
-}
+    return {
+      loading,
+      disableButton,
+      dataSuccess,
+      emailSuccess,
+      name,
+      message,
+      email,
+      venue,
+      date,
+      handleSubmit,
+      sent,
+    };
+  },
+};
 </script>
