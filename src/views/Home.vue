@@ -70,7 +70,7 @@
             grown a long
             <a
               style="text-decoration: underline"
-              href="https://yptpiheqktfmeoisgtea.supabase.co/storage/v1/object/sign/avatars/Brook%20Avenue%20FLAVOUR%20LIST%202023%20portrait.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL0Jyb29rIEF2ZW51ZSBGTEFWT1VSIExJU1QgMjAyMyBwb3J0cmFpdC5wZGYiLCJpYXQiOjE2ODY4NTE2MTUsImV4cCI6MTcxODM4NzYxNX0.HcYRLF98bj6N2xIj-7liy2QRuExZI8vgC9d35IBQ8gE&t=2023-06-15T17%3A53%3A35.661Z"
+              href="https://tvypnxilpffosyzymcfm.supabase.co/storage/v1/object/public/blotion-assets/2024_Flavour_List_Brook_Avenue.pdf"
               target="_blank"
               >list of flavours</a
             >. You and your partner get to choose four flavours from this list
