@@ -167,8 +167,8 @@
                     <p>As Standard:</p>
                     <ul style="list-style-type: circle" class="pt-3">
                       <li>Choice of 4 gelato flavours</li>
-                      <li>Plain & Luxury waffle cones</li>
-                      <li>'Just Married' gelato tubs</li>
+                      <li>Plain & chocolate dipped waffle cones</li>
+                      <li>Wedding themed stamped eco friendly gelato tubs</li>
                       <li>2hrs of scooping service</li>
                       <li>Member of staff</li>
                       <li>
