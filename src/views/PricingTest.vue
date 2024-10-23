@@ -105,15 +105,12 @@
               </p>
 
               <div class="buttons pt-5">
-                <a href="/src/assets/best.pdf" target="_blank">
+                <a href="/best.pdf" target="_blank">
                   <div class="button">
                     <p>Best Sellers!</p>
                   </div>
                 </a>
-                <a
-                  href="https://tvypnxilpffosyzymcfm.supabase.co/storage/v1/object/public/blotion-assets/2024_Flavour_List_Brook_Avenue.pdf"
-                  target="_blank"
-                >
+                <a href="/full.pdf" target="_blank">
                   <div class="button">
                     <p>Full Flavour list - Over 50+ flavours</p>
                   </div>
@@ -215,7 +212,7 @@
                         and icing sugar come as standard.
                       </li>
                       <li>
-                        <a href="/src/assets/add-on.pdf" target="_blank"
+                        <a href="/add-on.pdf" target="_blank"
                           ><span class="has-text-weight-semibold"
                             >Candy Wall</span
                           ></a
@@ -223,7 +220,7 @@
                         - 8 Full Dispensers of popular sweets and candies.
                       </li>
                       <li>
-                        <a href="/src/assets/add-on.pdf" target="_blank"
+                        <a href="/add-on.pdf" target="_blank"
                           ><span class="has-text-weight-semibold"
                             >Crisp Wall</span
                           ></a
