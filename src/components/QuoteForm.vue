@@ -8,129 +8,15 @@
         </div>
       </div>
 
-      <form name="Quote" class="has-text-left pt-5">
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input
-              class="input"
-              name="name"
-              type="text"
-              placeholder="Name"
-              v-model="name"
-            />
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Email</label>
-          <div class="control">
-            <input
-              class="input"
-              name="email"
-              type="email"
-              placeholder="hello@email.com"
-              v-model="email"
-            />
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Venue</label>
-          <div class="control">
-            <input
-              class="input"
-              name="venue"
-              type="text"
-              placeholder="Venue"
-              v-model="venue"
-            />
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Event Date</label>
-          <div class="control">
-            <input
-              class="input"
-              name="date"
-              type="date"
-              placeholder="Date"
-              v-model="date"
-            />
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Number of Guests</label>
-          <div class="control">
-            <input
-              class="input"
-              name="guests"
-              type="number"
-              placeholder="120"
-              v-model="guests"
-            />
-          </div>
-        </div>
-        <label class="checkbox">
-          <input type="checkbox" required />
-          <span> I agree to marketing permissons, contact me by email.</span>
-        </label>
-      </form>
-
-      <div class="pt-6 has-text-left">
-        <div class="block">
-          <div class="block">
-            <div class="title">Estimated Quote</div>
-            <div v-if="guests" class="title">
-              £ {{ Math.round(390 + guests * 1) }}
-            </div>
-            <div v-else class="title">£ 0</div>
-            <div class="subtitle mt-4 mb-0">
-              Quote includes travel within 20 miles of Belfast.
-            </div>
-            <div class="subtitle mt-2">
-              To register your interest, request a date check and personalised
-              quote click below.
-            </div>
-          </div>
-
-          <div class="field is-grouped">
-            <div class="control">
-              <button
-                @click="handleSubmit(), (isActive = !isActive)"
-                title="Enter your email"
-                type="submit"
-                class="button"
-                :disabled="!email || disableButton"
-                v-bind:class="{ isLoading: loading }"
-              >
-                Submit Request
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="modal p-6"
-        v-bind:class="{ 'is-active': isActive, 'toggle-off': !isActive }"
-      >
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">Thank You</p>
-            <button
-              class="delete"
-              @click="isActive = !isActive"
-              aria-label="close"
-            ></button>
-          </header>
-          <section class="modal-card-body">
-            <p>
-              We will be in touch soon with a personalised quote and to let you
-              know if your date is available.
-            </p>
-          </section>
-          <footer class="modal-card-foot"></footer>
-        </div>
+      <div>
+        <iframe
+          height="840"
+          style="min-width: 100%; max-width: 600px; border: 0"
+          id="sn-form-czija"
+          src="https://app.studioninja.co/contactform/parser/0a800fc9-9234-1d0f-8192-425937cd6c78/0a800fc9-9234-1d0f-8192-425937fe6c7a"
+          allowfullscreen
+        >
+        </iframe>
       </div>
     </div>
   </div>

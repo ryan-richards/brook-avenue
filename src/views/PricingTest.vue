@@ -44,7 +44,7 @@
                 day whether it be right after your ceremony, during the welcome
                 reception or even as a surprise in the evening.
               </p>
-              <p>You can generate an estimated quote below.</p>
+              <p>You can get a personalised quote below:</p>
               <div class="pt-5">
                 <router-link class="button" to="/pricing#quoteform"
                   >Generate Quote</router-link
@@ -103,18 +103,19 @@
                 choose something you've never tried before as a surprise on the
                 day.
               </p>
-              <p class="pt-1">
-                Have some fun and use the randomise button below to explore some
-                of our artisan flavours!
-              </p>
 
               <div class="buttons pt-5">
+                <a href="/src/assets/best.pdf" target="_blank">
+                  <div class="button">
+                    <p>Best Sellers!</p>
+                  </div>
+                </a>
                 <a
                   href="https://tvypnxilpffosyzymcfm.supabase.co/storage/v1/object/public/blotion-assets/2024_Flavour_List_Brook_Avenue.pdf"
                   target="_blank"
                 >
                   <div class="button">
-                    <p>Download Full List</p>
+                    <p>Full Flavour list - Over 50+ flavours</p>
                   </div>
                 </a>
               </div>
@@ -152,20 +153,42 @@
           </div>
 
           <div class="container">
-            <div class="columns is-centered">
+            <p>Pick One of our Three Packages to suit your day perfectly:</p>
+
+            <p class="has-text-weight-bold">
+              Simply Gelato, Personal Touch and The Ultimate All Day Package.
+              Prices start from £460
+            </p>
+
+            <p class="pt-3">
+              Our Simply Gelato Package is our standard package, extras can be
+              added on individually, or bump up to our other packages which have
+              extras included!
+            </p>
+
+            <div class="columns is-centered pt-6">
               <div class="column is-half">
                 <div class="has-text-left">
                   <div class="box">
-                    <p>As Standard:</p>
+                    <p class="has-text-weight-bold">Simply Gelato Package:</p>
                     <ul style="list-style-type: circle" class="pt-3">
-                      <li>Choice of 4 gelato flavours</li>
+                      <li>
+                        Choice of up to 4 gelato flavours from our Best Sellers
+                        list! (Personal Touch and The Ultimate All Day package
+                        includes our Full Flavour List - Over 50 Flavours and
+                        the option to create custom flavours!)
+                      </li>
                       <li>Plain & chocolate dipped waffle cones</li>
                       <li>Wedding themed stamped eco friendly gelato tubs</li>
-                      <li>2hrs of scooping service</li>
+                      <li>
+                        90mins of scooping service time (Personal Touch Package
+                        and The Ultimate All Day Package comes with 2 hours of
+                        service time)
+                      </li>
                       <li>Member of staff</li>
                       <li>
-                        Travel within 20 miles of Belfast (A small travel fee
-                        will apply beyond 20 miles of Belfast - submit a request
+                        Travel within 40 miles of Belfast (A small travel fee
+                        will apply beyond 40 miles of Belfast - submit a request
                         below for an exact quote)
                       </li>
                     </ul>
@@ -175,19 +198,55 @@
               <div class="column is-half">
                 <div class="has-text-left">
                   <div class="box">
-                    <p>Optional Extras:</p>
+                    <p class="has-text-weight-bold">Add-ons and Extras:</p>
                     <ul style="list-style-type: circle" class="pt-3">
                       <li>Personalised wafer discs</li>
                       <li>Personalised gelato tubs</li>
                       <li>Cadbury's Flakes</li>
+                      <li>
+                        <a href="https://thepancakecart.com" target="_blank"
+                          ><span class="has-text-weight-semibold"
+                            >Mini Pancake Cart</span
+                          ></a
+                        >
+                        - 2 Hours of Pancake Service. Choose from a range of
+                        toppings and sauces: Choose 1 fresh fruit option, 2
+                        toppings and 2 sauces. Maple Syrup, Fresh whipped cream
+                        and icing sugar come as standard.
+                      </li>
+                      <li>
+                        <a href="/src/assets/add-on.pdf" target="_blank"
+                          ><span class="has-text-weight-semibold"
+                            >Candy Wall</span
+                          ></a
+                        >
+                        - 8 Full Dispensers of popular sweets and candies.
+                      </li>
+                      <li>
+                        <a href="/src/assets/add-on.pdf" target="_blank"
+                          ><span class="has-text-weight-semibold"
+                            >Crisp Wall</span
+                          ></a
+                        >
+                        - Holds 90 packets Mixture of popular Crisp brands and
+                        flavours. (additional packs can be added on at your
+                        request)
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
             <div class="has-text-centered">
-              <p>
-                Have something in mind not listed here?
+              <p class="pt-6">
+                Get details and pricing on our Personal Touch Package and The
+                Ultimate All Day Package by entering your details below:
+              </p>
+
+              <p class="pt-6">
+                Have a Question or don’t have a date/venue set yet? Get in touch
+                Here and we can provide you with some provisional Quote
+                Information
                 <router-link
                   to="/contact"
                   style="text-decoration: underline; color: rgb(60, 102, 72)"
@@ -211,7 +270,7 @@
 </template>
 
 <script>
-import QuoteForm from "../components/QuoteForm-clone.vue";
+import QuoteForm from "../components/QuoteForm.vue";
 import { useHead } from "@vueuse/head";
 import ContentBody from "../components/ContentBody.vue";
 import { ref } from "vue";
@@ -222,6 +281,8 @@ export default {
     ContentBody,
   },
   setup() {
+    let randomNumber = 0;
+    const randomFlavourText = ref("");
     useHead({
       title: "Pricing - Brook Avenue Gelato Cart Hire Belfast",
       meta: [
@@ -233,7 +294,13 @@ export default {
       ],
     });
 
-    return {};
+    async function randomFlavour() {}
+
+    return {
+      randomNumber,
+      randomFlavour,
+      randomFlavourText,
+    };
   },
 };
 </script>
