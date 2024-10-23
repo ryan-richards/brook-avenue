@@ -46,11 +46,6 @@
               >About</a
             ></router-link
           >
-          <router-link to="/about"
-            ><a @click="toggle" class="navbar-item list pt-4"
-              >About</a
-            ></router-link
-          >
           <router-link to="/contact"
             ><a @click="toggle" class="navbar-item list pt-4"
               >Contact</a
