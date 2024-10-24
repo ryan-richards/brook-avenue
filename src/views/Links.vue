@@ -6,7 +6,7 @@
       <div class="is-flex is-justify-content-center">
         <div
           class="buttons is-flex is-flex-direction-column"
-          style="min-width: 300px"
+          style="min-width: 350px"
         >
           <a
             v-for="(link, index) in links"
@@ -47,7 +47,7 @@ export default {
         url: "https://brookavenue.co.uk/pricing",
       },
       {
-        title: "Vote Here",
+        title: "Vote Here : 34. Couples Choice of the Year",
         url: "https://www.surveymonkey.com/r/The9thNorthernIrelandWeddingAwards2025?fbclid=IwZXh0bgNhZW0CMTEAAR2pNVjD8UG1WgVFOqVMjc46p2j2supcdoyk0fktPTf6MhCVcEvRUyIxJ4o_aem_7GVESFncsa8r4-gTFk8_ww",
       },
       {
@@ -56,7 +56,7 @@ export default {
       },
       {
         title: "Candy & Crisp Wall",
-        url: "https://thepancakecart.com/pricing",
+        url: "https://brookavenue.co.uk/pricing",
       },
       {
         title: "Leave us a 5⭐️ Review",
