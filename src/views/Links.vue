@@ -25,36 +25,51 @@
 </template>
 
 <script>
+import { useHead } from "@vueuse/head";
+
 export default {
-  name: "LinksList",
-  data() {
-    return {
-      links: [
+  name: "Useful Links",
+  setup() {
+    useHead({
+      title: "Links - Brook Avenue Gelato",
+      meta: [
         {
-          title: "Enquire Here",
-          url: "https://brookavenue.co.uk/pricing",
-        },
-        {
-          title: "Vote Here",
-          url: "https://www.surveymonkey.com/r/The9thNorthernIrelandWeddingAwards2025?fbclid=IwZXh0bgNhZW0CMTEAAR2pNVjD8UG1WgVFOqVMjc46p2j2supcdoyk0fktPTf6MhCVcEvRUyIxJ4o_aem_7GVESFncsa8r4-gTFk8_ww",
-        },
-        {
-          title: "Mini Pancake Cart",
-          url: "https://thepancakecart.com",
-        },
-        {
-          title: "Candy & Crisp Wall",
-          url: "https://thepancakecart.com/pricing",
-        },
-        {
-          title: "Leave us a 5⭐️ Review",
-          url: "https://g.page/r/CWBQn1aRT_UOEBM/review",
-        },
-        {
-          title: "Website",
-          url: "https://brookavenue.co.uk",
+          title: "description",
+          content:
+            "Useful Links for Brook Avenue Gelato - Get pricing details for homemade gelato and ice cream cart hire in Belfast, Northern Ireland for your Wedding or Corporate/Private Event. ",
         },
       ],
+    });
+
+    const links = [
+      {
+        title: "Enquire Here",
+        url: "https://brookavenue.co.uk/pricing",
+      },
+      {
+        title: "Vote Here",
+        url: "https://www.surveymonkey.com/r/The9thNorthernIrelandWeddingAwards2025?fbclid=IwZXh0bgNhZW0CMTEAAR2pNVjD8UG1WgVFOqVMjc46p2j2supcdoyk0fktPTf6MhCVcEvRUyIxJ4o_aem_7GVESFncsa8r4-gTFk8_ww",
+      },
+      {
+        title: "Mini Pancake Cart",
+        url: "https://thepancakecart.com",
+      },
+      {
+        title: "Candy & Crisp Wall",
+        url: "https://thepancakecart.com/pricing",
+      },
+      {
+        title: "Leave us a 5⭐️ Review",
+        url: "https://g.page/r/CWBQn1aRT_UOEBM/review",
+      },
+      {
+        title: "Website",
+        url: "https://brookavenue.co.uk",
+      },
+    ];
+
+    return {
+      links,
     };
   },
 };

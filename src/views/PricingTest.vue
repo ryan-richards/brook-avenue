@@ -84,7 +84,7 @@
           <div class="center">
             <div class="has-text-left" style="max-width: 60vh">
               <p>
-                We have been passionate about making great gelato for several
+                We have been passionate about making great gelato for almost ten
                 years now and naturally we've ended up with a rather large list
                 of flavour options including many non-dairy and vegan flavours.
               </p>
@@ -94,9 +94,7 @@
                 as we make it fresh for each event.
               </p>
               <p class="pt-1">
-                Our handcrafted cart can hold up to four different flavours, you
-                can either choose from our catalogue or we can craft a custom
-                flavour.
+                Our handcrafted cart can hold up to four different flavours.
               </p>
               <p class="pt-1">
                 Your combination can be made up of fan favourites, or you can
