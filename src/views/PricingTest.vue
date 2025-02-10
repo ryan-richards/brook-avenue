@@ -303,7 +303,7 @@ export default {
 </script>
 
 <style scoped>
-.center,
+<style scoped > .center,
 .center-column,
 .top,
 .right,
@@ -321,7 +321,7 @@ export default {
 }
 
 .box {
-  background-color: transparent;
+  background-color: "transparent";
   box-shadow: none;
   border-radius: none;
 }
@@ -332,29 +332,7 @@ export default {
   align-items: center;
 }
 
-/* Mobile: Full-width video, no white edges */
-@media (max-width: 768px) {
-  .mobileImage {
-    margin-left: -3rem;
-    margin-right: -3rem;
-  }
-
-  .image video {
-    display: block;
-    width: 100vw;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-}
-
-/* Desktop: Force wide crop */
 @media (min-width: 768px) {
-  .image {
-    width: 100%; /* Ensure the container is full-width */
-    overflow: hidden; /* Hide overflow to force cropping */
-  }
-
   .image video {
     width: 100%; /* Stretches across full width */
     height: 50vh; /* Fixed height for wide crop */
@@ -364,19 +342,18 @@ export default {
   }
 }
 
-/* Desktop: Force wide crop */
-@media (min-width: 1268px) {
-  .image {
-    width: 100%; /* Ensure the container is full-width */
-    overflow: hidden; /* Hide overflow to force cropping */
+@media (max-width: 768px) {
+  .mobileImage {
+    margin-left: -3rem;
+    margin-right: -3rem;
   }
 
   .image video {
-    width: 100%; /* Stretches across full width */
-    height: 70vh; /* Fixed height for wide crop */
-    object-fit: cover; /* Crops instead of shrinking */
-    object-position: center 20%; /* Adjust vertical position */
-    position: relative;
+    display: block; /* Removes extra space under the video */
+    width: 100vw; /* Makes it full width */
+    max-width: 100%; /* Prevents overflow on desktop */
+    height: auto; /* Keeps aspect ratio */
+    object-fit: cover; /* Ensures no white bars */
   }
 }
 </style>
