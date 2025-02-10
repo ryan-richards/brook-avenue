@@ -5,11 +5,6 @@
         <div class="column has-text-left">
           <p>Brook Avenue</p>
           <p>info@brookavenue.co.uk</p>
-          <a
-            href="https://tvypnxilpffosyzymcfm.supabase.co/storage/v1/object/public/blotion-assets/Brook_Avenue_Booking_T_Cs_2023.pdf"
-          >
-            <p>Terms & Conditions © 2024</p>
-          </a>
           <div class="block pt-3">
             <a href="https://www.facebook.com/brookavenuegelato">
               <span
@@ -41,6 +36,15 @@
             style="max-width: 200px"
           >
             <div class="column">
+              <a href="https://larchfieldestate.co.uk/">
+                <img
+                  style="max-width: 90px"
+                  src="../assets/brook-larchfield.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="column">
               <a href="https://weddinghelpni.com">
                 <img
                   style="max-width: 90px"
@@ -49,6 +53,11 @@
                 />
               </a>
             </div>
+          </div>
+          <div
+            class="columns is-mobile aligned-center"
+            style="max-width: 200px"
+          >
             <div class="column">
               <a
                 href="https://yptpiheqktfmeoisgtea.supabase.in/storage/v1/object/sign/avatars/Were_Good_To_Go_certificate_V3_English_editable.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL1dlcmVfR29vZF9Ub19Hb19jZXJ0aWZpY2F0ZV9WM19FbmdsaXNoX2VkaXRhYmxlLnBkZiIsImlhdCI6MTYzNzE1NTExOSwiZXhwIjoxOTUyNTE1MTE5fQ.3LAJspYrz5B8pxnpo0AEyrRFg9KaEjGDW4soMn8WwDg"

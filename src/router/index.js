@@ -23,6 +23,11 @@ const routes = [
     component: () => import("../views/PricingTest.vue"),
   },
   {
+    path: "/corporate",
+    name: "Corporate",
+    component: () => import("../views/Corporate.vue"),
+  },
+  {
     path: "/blog",
     name: "Blog",
     component: () => import("../views/Blog.vue"),
@@ -31,6 +36,11 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: () => import("../views/Contact.vue"),
+  },
+  {
+    path: "/news",
+    name: "News",
+    component: () => import("../views/News.vue"),
   },
   {
     path: "/links",

@@ -61,11 +61,13 @@
         <div class="block pt-5 pb-5">
           <div class="center">
             <div class="image mobileImage">
-              <img
-                src="../assets/brook-23-crop.jpg"
-                alt="Gelato flavours being written onto a custom chalkboard for a wedding at Galgorm Resort and Spa, Ballymena, Northern Ireland."
-                style="max-width: 80vh"
-              />
+              <video
+                src="../assets/brook-video.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+              ></video>
             </div>
           </div>
 
@@ -319,7 +321,7 @@ export default {
 }
 
 .box {
-  background-color: "transparent";
+  background-color: transparent;
   box-shadow: none;
   border-radius: none;
 }
@@ -329,10 +331,52 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+/* Mobile: Full-width video, no white edges */
 @media (max-width: 768px) {
   .mobileImage {
     margin-left: -3rem;
     margin-right: -3rem;
+  }
+
+  .image video {
+    display: block;
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Desktop: Force wide crop */
+@media (min-width: 768px) {
+  .image {
+    width: 100%; /* Ensure the container is full-width */
+    overflow: hidden; /* Hide overflow to force cropping */
+  }
+
+  .image video {
+    width: 100%; /* Stretches across full width */
+    height: 50vh; /* Fixed height for wide crop */
+    object-fit: cover; /* Crops instead of shrinking */
+    object-position: center 20%; /* Adjust vertical position */
+    position: relative;
+  }
+}
+
+/* Desktop: Force wide crop */
+@media (min-width: 1268px) {
+  .image {
+    width: 100%; /* Ensure the container is full-width */
+    overflow: hidden; /* Hide overflow to force cropping */
+  }
+
+  .image video {
+    width: 100%; /* Stretches across full width */
+    height: 70vh; /* Fixed height for wide crop */
+    object-fit: cover; /* Crops instead of shrinking */
+    object-position: center 20%; /* Adjust vertical position */
+    position: relative;
   }
 }
 </style>

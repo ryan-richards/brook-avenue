@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Banner />
     <div class="hero halfHome home"></div>
 
     <div class="pt-4"></div>
@@ -104,11 +103,7 @@
     </div>
 
     <div class="center mb-6">
-      <Award
-        img="https://creativeoceanicblog.wordpress.com/wp-content/uploads/2024/01/8th-niwa-24.jpg?w=833"
-        text="Outstanding Wedding Supplier of the Year"
-        person="Northern Ireland Wedding Awards"
-      />
+      <News :showHeroSection="false" />
     </div>
 
     <div
@@ -267,14 +262,12 @@ The guests absolutely loved the gelato. It was so tasty!! They went over and abo
 <script>
 import { useHead } from "@vueuse/head";
 import Test from "../components/Test.vue";
-import Banner from "../components/Banner.vue";
-import Award from "../components/Award.vue";
+import News from "../views/News.vue";
 
 export default {
   components: {
-    Award,
+    News,
     Test,
-    Banner,
   },
   data() {
     return {
