@@ -60,7 +60,7 @@
       <template v-slot:content>
         <div class="block pt-5 pb-5">
           <div class="center">
-            <div class="image mobileImage">
+            <div class="image mobileImage video">
               <video
                 src="../assets/brook-video.mp4"
                 autoplay
@@ -333,12 +333,18 @@ export default {
 }
 
 @media (min-width: 768px) {
+  .video {
+    width: 100%; /* Ensure the container is full-width */
+    overflow: hidden; /* Hide overflow to force cropping */
+  }
+
   .image video {
     width: 100%; /* Stretches across full width */
-    height: 50vh; /* Fixed height for wide crop */
+    height: 60vh; /* Fixed height for wide crop */
     object-fit: cover; /* Crops instead of shrinking */
-    object-position: center 20%; /* Adjust vertical position */
+    object-position: center 30%; /* Adjust vertical position */
     position: relative;
+    overflow: hidden;
   }
 }
 
