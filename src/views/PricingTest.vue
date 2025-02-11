@@ -61,13 +61,15 @@
         <div class="block pt-5 pb-5">
           <div class="center">
             <div class="image mobileImage video">
-              <video
-                src="../assets/brook-video.mp4"
-                autoplay
-                loop
-                muted
-                playsinline
-              ></video>
+              <a href="https://cinematiclove.co.uk/">
+                <video
+                  src="../assets/brook-video.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                ></video>
+              </a>
             </div>
           </div>
 
