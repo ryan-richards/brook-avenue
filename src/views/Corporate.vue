@@ -22,9 +22,7 @@
               >
                 Boost Your Next Corporate Event with Brook Avenue!
               </div>
-              <div class="subtitle">
-                Guide to booking your wedding gelato cart.
-              </div>
+              <div class="subtitle">Guide to booking your gelato cart.</div>
             </div>
           </div>
 
@@ -158,7 +156,7 @@
               </div>
             </div>
 
-            <div>
+            <div style="overflow: hidden">
               <iframe
                 height="1279"
                 style="min-width: 100%; max-width: 600px; border: 0"
