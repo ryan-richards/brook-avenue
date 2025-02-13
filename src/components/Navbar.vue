@@ -41,7 +41,11 @@
               >Pricing</a
             ></router-link
           >
-
+          <router-link to="/corporate"
+            ><a @click="toggle" class="navbar-item list pt-4"
+              >Corporate</a
+            ></router-link
+          >
           <router-link to="/about"
             ><a @click="toggle" class="navbar-item list pt-4"
               >About</a
@@ -52,11 +56,13 @@
               >Contact</a
             ></router-link
           >
-          <a
-            href="https://thepancakecart.com/pricing"
-            class="navbar-item list pt-4"
-            >Mini Pancake Cart</a
-          >
+          <p>
+            <a
+              href="https://thepancakecart.com/pricing"
+              class="navbar-item list pt-4"
+              >Mini Pancake Cart</a
+            >
+          </p>
         </div>
       </div>
     </nav>

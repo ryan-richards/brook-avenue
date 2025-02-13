@@ -6,7 +6,7 @@
           <div class="center">
             <div class="image mobileImage">
               <img
-                src="../assets/brook-wide.jpg"
+                src="../assets/brook-cart-corp.png"
                 class="image-crop"
                 alt="Ice cream/Gelato Bicycle Cart at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral wedding basket and cart setup infront of Phantom house at Galgorm wedding venue."
                 style="max-width: 80vh"
@@ -30,18 +30,48 @@
 
           <div class="center">
             <div class="has-text-left" style="max-width: 70vh">
-              <p>
+              <p class="mb-1">
                 Looking for a unique way to energise your team, impress clients,
                 or celebrate a company milestone? Brook Avenue brings delicious,
                 handcrafted treats directly to your office or event venue.
               </p>
-              <p>
+              <p class="mb-1">
                 Brook Avenue offers homemade gelato in our custom built Gelato
                 Carts, Mini Dutch Style Pancakes as well as Candy & Crisp walls!
               </p>
 
+              <div class="notification mt-6 mb-6">
+                <p class="is-size-5 mb-4 has-text-left">
+                  Contact us today for a personalised quote!
+                </p>
+                <div class="has-text-left">
+                  <a @click="scrollToForm" class="button is-dark is-outlined"
+                    >Enquire now</a
+                  >
+                </div>
+              </div>
+
+              <div class="center">
+                <div class="image mobileImage video">
+                  <a href="https://cinematiclove.co.uk/">
+                    <video
+                      src="../assets/corp-video.mp4"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                    ></video>
+                  </a>
+                </div>
+              </div>
+
               <div class="box mt-6">
-                <h2 class="title is-4 has-text-centered mb-4 pt-5">We offer</h2>
+                <div
+                  class="title has-text-centered headingBlock"
+                  style="font-weight: 800; font-size: 1.6em"
+                >
+                  We offer
+                </div>
                 <div class="columns">
                   <div class="column">
                     <ul style="list-style-type: circle">
@@ -62,30 +92,14 @@
                 </div>
               </div>
 
-              <div class="center">
-                <div class="image mobileImage">
-                  <img
-                    src="../assets/brook-wide.jpg"
-                    class="image-crop"
-                    alt="Ice cream/Gelato Bicycle Cart at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral wedding basket and cart setup infront of Phantom house at Galgorm wedding venue."
-                    style="max-width: 80vh"
-                  />
-                </div>
-              </div>
-
               <!-- Perfect For Section -->
 
               <div class="box">
-                <div class="center pt-6 pb-6 has-text-centered pt-5 mb-2">
-                  <div>
-                    <div
-                      class="title has-text-centered headingBlock"
-                      style="font-weight: 800; font-size: 1.6em"
-                    >
-                      Perfect for
-                    </div>
-                    <div class="subtitle">Any Event</div>
-                  </div>
+                <div
+                  class="title has-text-centered headingBlock"
+                  style="font-weight: 800; font-size: 1.6em"
+                >
+                  Perfect for
                 </div>
                 <div class="columns is-multiline">
                   <div class="column is-half">
@@ -110,26 +124,21 @@
           </div>
         </div>
 
-        <div class="notification mt-6 mb-6">
-          <div class="container">
-            <div
-              class="is-flex is-flex-direction-column"
-              style="max-width: 600px; margin: 0 auto"
-            >
-              <p class="is-size-5 mb-4 has-text-left">
-                Download our products, services, packages and pricing brochure.
-              </p>
-              <div class="has-text-left">
-                <a href="#" class="button is-dark is-outlined">Coming Soon</a>
-              </div>
+        <div class="center">
+          <div class="notification mt-4 mb-6">
+            <p class="is-size-5 mb-4 has-text-left">
+              Download our products, services, packages and pricing brochure.
+            </p>
+            <div class="has-text-left">
+              <a href="#" class="button is-dark is-outlined">Coming soon</a>
             </div>
           </div>
         </div>
 
-        <div class="center">
+        <div class="center mb-6">
           <div class="image mobileImage">
             <img
-              src="../assets/brook-wide.jpg"
+              src="../assets/pancake-corp.png"
               class="image-crop"
               alt="Ice cream/Gelato Bicycle Cart at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral wedding basket and cart setup infront of Phantom house at Galgorm wedding venue."
               style="max-width: 80vh"
@@ -137,23 +146,8 @@
           </div>
         </div>
 
-        <div class="box">
-          <h2 class="title is-3">Contact us today for a personalised quote!</h2>
-          <p class="mb-4">
-            If you are interested in booking for some point in the future but
-            you don't have a specific date in mind yet just get in touch and we
-            can give you up to date availability.
-          </p>
-          <div class="has-text-centered">
-            <button class="button">Enquire Now</button>
-          </div>
-        </div>
-
-        <!-- Testimonials -->
-        <TestimonialSection :testimonials="testimonials" />
-
-        <!-- Contact Form -->
-        <div class="wrapper">
+        <!-- Contact Form with ref -->
+        <div ref="enquiryForm" class="wrapper">
           <div class="container" style="max-width: 60vh">
             <div class="center">
               <div>
@@ -176,6 +170,9 @@
             </div>
           </div>
         </div>
+
+        <!-- Testimonials -->
+        <TestimonialSection :testimonials="testimonials" />
       </template>
     </ContentBody>
   </div>
@@ -195,6 +192,15 @@ export default {
     ContentBody,
   },
   setup() {
+    const enquiryForm = ref(null);
+
+    const scrollToForm = () => {
+      enquiryForm.value?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    };
+
     useHead({
       title: "Pricing - Brook Avenue Gelato Cart Hire Belfast",
       meta: [
@@ -207,6 +213,8 @@ export default {
     });
 
     return {
+      enquiryForm,
+      scrollToForm,
       testimonials: [
         {
           text: "Thank you so much for being at our event last week, I've heard only great things and we were happy to have Brook Avenue there! Thanks so much again, and I'm sure we'll see you again in the near future",
@@ -300,10 +308,34 @@ export default {
   margin-bottom: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .video {
+    width: 100%; /* Ensure the container is full-width */
+    overflow: hidden; /* Hide overflow to force cropping */
+  }
+
+  .image video {
+    width: 100%; /* Stretches across full width */
+    height: 50vh; /* Fixed height for wide crop */
+    object-fit: cover; /* Crops instead of shrinking */
+    object-position: center 30%; /* Adjust vertical position */
+    position: relative;
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 768px) {
   .mobileImage {
     margin-left: -3rem;
     margin-right: -3rem;
+  }
+
+  .image video {
+    display: block; /* Removes extra space under the video */
+    width: 100vw; /* Makes it full width */
+    max-width: 100%; /* Prevents overflow on desktop */
+    height: auto; /* Keeps aspect ratio */
+    object-fit: cover; /* Ensures no white bars */
   }
 }
 </style>

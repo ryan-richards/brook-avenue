@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <div class="center">
-      <div>
+      <div class="mb-6">
         <div class="title">Testimonials.</div>
         <div class="subtitle">The inside scoop</div>
       </div>
