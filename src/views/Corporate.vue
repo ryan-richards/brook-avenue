@@ -99,23 +99,17 @@
                 >
                   Perfect for
                 </div>
-                <div class="columns is-multiline">
-                  <div class="column is-half">
-                    <ul style="list-style-type: circle">
-                      <li>Team building days</li>
-                      <li>Product launches</li>
-                      <li>Office parties</li>
-                      <li>Staff morale boost</li>
-                    </ul>
-                  </div>
-                  <div class="column is-half">
-                    <ul style="list-style-type: circle">
-                      <li>Film and TV production shoot treats</li>
-                      <li>Client appreciation events</li>
-                      <li>Staff Treat Day</li>
-                      <li>Conferences</li>
-                    </ul>
-                  </div>
+                <div class="perfect-for-list">
+                  <ul style="list-style-type: circle">
+                    <li>Team building days</li>
+                    <li>Product launches</li>
+                    <li>Office parties</li>
+                    <li>Staff morale boost</li>
+                    <li>Film and TV production shoot treats</li>
+                    <li>Client appreciation events</li>
+                    <li>Staff Treat Day</li>
+                    <li>Conferences</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -334,6 +328,17 @@ export default {
     max-width: 100%; /* Prevents overflow on desktop */
     height: auto; /* Keeps aspect ratio */
     object-fit: cover; /* Ensures no white bars */
+  }
+}
+
+.perfect-for-list ul {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .perfect-for-list ul {
+    grid-template-columns: 1fr 1fr;
   }
 }
 </style>
