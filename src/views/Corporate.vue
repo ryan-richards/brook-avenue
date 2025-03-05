@@ -50,6 +50,17 @@
               </div>
 
               <div class="center">
+                <div class="image mobileImage hideMobile">
+                  <img
+                    src="../assets/brook-wide.jpg"
+                    class="image-crop"
+                    alt="Ice cream/Gelato Bicycle Cart at Galgorm Ballymena Northern Ireland. Mint green bicycle with floral wedding basket and cart setup infront of Phantom house at Galgorm wedding venue."
+                    style="max-width: 80vh"
+                  />
+                </div>
+              </div>
+
+              <div class="center">
                 <div class="image mobileImage video">
                   <a href="https://cinematiclove.co.uk/">
                     <video
@@ -119,11 +130,11 @@
         <div class="center">
           <div class="notification mt-4 mb-6">
             <p class="is-size-5 mb-4 has-text-left">
-              Download our products, services, packages and pricing brochure.
+              Click download to see our corporate brochure for more details.
             </p>
             <div class="has-text-left">
               <a
-                href="/corp-bro.pdf"
+                href="/brook-avenue-corporate.pdf"
                 class="button is-dark is-outlined"
                 target="_blank"
               >
@@ -309,7 +320,8 @@ export default {
 @media (min-width: 768px) {
   .video {
     width: 100%; /* Ensure the container is full-width */
-    overflow: hidden; /* Hide overflow to force cropping */
+    overflow: hidden;
+    display: none; /* Hide overflow to force cropping */
   }
 
   .image video {
@@ -335,6 +347,10 @@ export default {
     height: auto; /* Keeps aspect ratio */
     object-fit: cover; /* Ensures no white bars */
   }
+
+  .hideMobile {
+    display: none !important;
+  } /* Hide mobile version */
 }
 
 .perfect-for-list ul {
