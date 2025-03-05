@@ -122,7 +122,13 @@
               Download our products, services, packages and pricing brochure.
             </p>
             <div class="has-text-left">
-              <a href="#" class="button is-dark is-outlined">Coming soon</a>
+              <a
+                href="/corp-bro.pdf"
+                class="button is-dark is-outlined"
+                target="_blank"
+              >
+                Download
+              </a>
             </div>
           </div>
         </div>
